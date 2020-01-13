@@ -88,7 +88,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --base-href / --ssl` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -96,11 +96,15 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build --prod --base-href /` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Extract translations text
+
+Run `"ngx-translate-extract --input ./src --output ./src/assets/i18n/en-CA.json ./src/assets/i18n/fr-CA.json ./src/assets/i18n/ja-JP.json --marker marker --format namespaced-json --format-indentation \"  \" --sort"` to extract the translation on source code.
 
 ## Running end-to-end tests
 
