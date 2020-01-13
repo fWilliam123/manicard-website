@@ -1,0 +1,16 @@
+{
+  "footer": {
+    "copyright_line": "© {{year}} MANICARDS | All rights reserved."
+  },
+  "menu": {
+    "home": "Dashboard"
+  },
+  "snackbar": {
+    "link_soon": "This feature is not available at this time."
+  },
+  "toolbar": {
+    "language": "Language",
+    "logout": "Log out",
+    "welcome": "Welcome, {{username}}!"
+  }
+}

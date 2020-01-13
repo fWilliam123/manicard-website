@@ -1,0 +1,29 @@
+.footer {
+  height: 84px;
+  padding: 1rem 4rem 0 4rem;
+  background: #ffffff;
+  border-top: 1px solid #b8b8b8;
+
+  p {
+    color: #707070;
+  }
+
+  .mat-form-field {
+    line-height: 1.25;
+    font-size: 14px;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 1199.98px) {
+  .footer {
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+
+@media (max-width: 578px) {
+  .footer {
+    height: 130px;
+  }
+}

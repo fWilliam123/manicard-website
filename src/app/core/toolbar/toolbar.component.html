@@ -1,0 +1,41 @@
+<!-- Medium+ Window -->
+<mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="1em">
+
+  <!-- Start -->
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1em">
+
+    <!-- Button -->
+    <button mat-icon-button (click)="toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <!-- Logo -->
+    <a [routerLink]="['/']" class="logo"><img src="/assets/images/logo.png" /></a>
+  </div>
+
+  <!-- End -->
+  <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="1.5em">
+
+    <!-- Profile -->
+    <button mat-icon-button mat-button [matTooltip]=" 'toolbar.welcome' | translate :user ">
+      <mat-icon svgIcon="user"></mat-icon>
+    </button>
+
+    <!-- Notifications
+    <button mat-icon-button [matMenuTriggerFor]="notification_menu">
+      <mat-icon matBadge="3" matBadgeColor="accent" svgIcon="notification"></mat-icon>
+    </button>
+    <mat-menu #notification_menu="matMenu">
+      <button mat-menu-item>Notification 1</button>
+      <button mat-menu-item>Notification 2</button>
+      <button mat-menu-item>Notification 3</button>
+    </mat-menu> -->
+
+    <!-- Logout -->
+    <button mat-icon-button mat-button [matTooltip]=" 'toolbar.logout' | translate " [routerLink]="['/login']"
+      (click)="logout()">
+      <mat-icon svgIcon="logout"></mat-icon>
+    </button>
+
+  </div>
+</mat-toolbar>

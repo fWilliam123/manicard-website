@@ -1,0 +1,21 @@
+<div class="container-fluid footer">
+  <div class="row ">
+    <div class="col-md-6 col-lg-6 col-sm-6">
+      <p>{{ 'footer.copyright_line' | translate:{year:year} }}</p>
+    </div>
+    <div class="col-md-4 offset-lg-2 col-sm-6  offset-sm-0 offset-md-2 col-lg-4">
+
+      <!-- Select Language -->
+      <small>
+        <mat-form-field>
+          <mat-label>{{ 'toolbar.language' | translate }}</mat-label>
+          <mat-select [formControl]="language">
+            <mat-option *ngFor="let language of languages; trackBy: trackByLanguage" [value]="language.value">
+              {{ language.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </small>
+    </div>
+  </div>
+</div>

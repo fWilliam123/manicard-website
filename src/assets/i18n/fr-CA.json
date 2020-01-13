@@ -1,0 +1,16 @@
+{
+  "footer": {
+    "copyright_line": "© {{year}} MANICARDS | Tous droits réservés."
+  },
+  "menu": {
+    "home": "Tableau de bord"
+  },
+  "snackbar": {
+    "link_soon": "Cette page n'existe pas pour l'instant."
+  },
+  "toolbar": {
+    "language": "Langue",
+    "logout": "Déconnexion",
+    "welcome": "Bienvenue, {{username}} !"
+  }
+}

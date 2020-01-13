@@ -1,0 +1,31 @@
+<ng-container [ngSwitch]="true">
+
+  <ng-container *ngSwitchCase="item.children?.length > 0">
+    <a mat-list-item (click)="onParentContainerClick()" [ngClass]="{'expanded': expanded, 'menu-list-item': true}">
+      <mat-icon class="routeIcon" matListIcon svgIcon="{{item.iconName}}"></mat-icon>
+      <div class="text-wrapper">{{ 'menu.' + item.displayName | translate }}</div>
+      <span fxFlex *ngIf="item.children?.length">
+        <span fxFlex></span>
+        <mat-icon [@indicatorRotate]="expanded ? 'expanded': 'collapsed'">expand_more</mat-icon>
+      </span>
+    </a>
+    <div class="sub-menu" *ngIf="expanded">
+      <app-nav-item *ngFor="let child of item.children; trackBy: trackByChildren" [item]="child"></app-nav-item>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="item.disabled">
+    <a mat-list-item class="menu-list-item" (click)="onDisabledContainerClick()">
+      <mat-icon class="routeIcon" matListIcon svgIcon="{{item.iconName}}"></mat-icon>
+      <div class="text-wrapper">{{ 'menu.' + item.displayName | translate }}</div>
+    </a>
+  </ng-container>
+
+  <ng-container *ngSwitchDefault>
+    <a mat-list-item [routerLink]="item.route" routerLinkActive="active" [replaceUrl]="true"
+      [routerLinkActiveOptions]="{exact:true}" class="menu-list-item">
+      <mat-icon class="routeIcon" matListIcon svgIcon="{{item.iconName}}"></mat-icon>
+      <div class="text-wrapper">{{ 'menu.' + item.displayName | translate }}</div>
+    </a>
+  </ng-container>
+</ng-container>

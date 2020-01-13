@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  host_api: 'https://manicards.com',
+  languages: ['fr-CA', 'en-CA'],
 };

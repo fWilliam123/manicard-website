@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  width: 100%;
+}
+
+.mat-list-item {
+  display: flex;
+  width: auto;
+
+  .routeIcon {
+    margin-right: 10px;
+  }
+}
+
+.sub-menu app-nav-item:last-child {
+  .mat-list-item .text-wrapper {
+    border-bottom: 0;
+  }
+}

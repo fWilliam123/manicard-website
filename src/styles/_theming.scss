@@ -1,0 +1,19 @@
+@import '~@angular/material/theming';
+
+$mat-indigo: (default: #001E38,
+  lighter:#093e6c,
+  darker:#001527,
+  contrast: (default: $light-primary-text,
+    lighter:$light-primary-text,
+    darker:$light-primary-text,
+  ),
+);
+
+$mat-orange: (default: #F88C24,
+  lighter:#FDD835,
+  darker:#F88C24,
+  contrast: (default: $light-primary-text,
+    lighter:$dark-primary-text,
+    darker:$light-primary-text,
+  ),
+);

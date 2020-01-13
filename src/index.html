@@ -1,13 +1,26 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
+  <!-- https://stackoverflow.com/a/31978712/7878958 -->
+  <meta name="format-detection" content="telephone=no">
   <title>ManicardWebsite</title>
-  <base href="/">
+
+  <script>
+    if (document.getElementsByTagName('base').length === 0) document.write('<base href="' + window.location.pathname +
+      '"/>');
+
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Raleway:400,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+
+<body class="mat-app-background">
   <app-root></app-root>
 </body>
+
 </html>

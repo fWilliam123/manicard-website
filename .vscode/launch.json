@@ -1,0 +1,69 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug on Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "npm: start",
+      "url": "https://localhost:4200/",
+      "webRoot": "${workspaceFolder}",
+      "sourceMapPathOverrides": {
+        "webpack:/*": "${webRoot}/*",
+        "/./*": "${webRoot}/*",
+        "/src/*": "${webRoot}/*",
+        "/*": "*",
+        "/./~/*": "${webRoot}/node_modules/*"
+      }
+    },
+    {
+      "name": "Test on Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "https://localhost:9876/debug.html",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:/*": "${webRoot}/*",
+        "/./*": "${webRoot}/*",
+        "/src/*": "${webRoot}/*",
+        "/*": "*",
+        "/./~/*": "${webRoot}/node_modules/*"
+      }
+    },
+    {
+      "name": "ng e2e",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/protractor/bin/protractor",
+      "protocol": "inspector",
+      "args": [
+        "${workspaceFolder}/e2e/protractor.conf.js"
+      ]
+    },
+    // https://github.com/firefox-devtools/vscode-firefox-debug/issues/150
+    {
+      "name": "Debug on Firefox",
+      "type": "firefox",
+      "request": "launch",
+      "preLaunchTask": "npm: start",
+      "url": "https://localhost:4200/",
+      "webRoot": "${workspaceFolder}",
+      "profile": "default",
+      "pathMappings": [
+        {
+          "url": "webpack:///node_modules/",
+          "path": "${webRoot}/node_modules/"
+        },
+        {
+          "url": "webpack:///webpack",
+          "path": null
+        },
+        {
+          "url": "webpack:///(webpack)",
+          "path": null
+        }
+      ]
+    },
+  ]
+}
