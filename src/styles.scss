@@ -13,7 +13,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$manicard-website-primary: mat-palette($mat-indigo);
+$manicard-website-primary: mat-palette($mat-orange);
 $manicard-website-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
@@ -37,6 +37,6 @@ $manicard-website-theme: mat-light-theme($manicard-website-primary, $manicard-we
 @import "styles/layout";
 
 @font-face {
-  font-family: "Noto Color Emoji";
+  font-family: Raleway, sans-serif;
   src: url(assets/fonts/NotoColorEmoji.ttf) format("truetype");
 }

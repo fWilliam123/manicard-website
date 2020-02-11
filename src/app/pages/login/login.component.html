@@ -1,0 +1,49 @@
+<app-auth-page>
+  <form name='form' (ngSubmit)='f.form.valid && onSubmit()' #f="ngForm">
+    <div class="row">
+      <!-- Email -->
+      <mat-form-field appearance="outline" class="col-12">
+        <mat-label>{{ 'login.email.title' | translate }}</mat-label>
+        <mat-icon matPrefix>email</mat-icon>
+        <input matInput type="email" name="email" [(ngModel)]="loginForm.email" #email="ngModel" required email>
+        <mat-error *ngIf="email.errors">
+          <mat-error *ngIf="email.errors['required'] || email.errors['email']">
+            {{'login.email.required'|translate}}
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Password -->
+      <mat-form-field appearance="outline" class="col-12 mt-3">
+        <mat-label>{{ 'login.password.title' | translate }}</mat-label>
+        <mat-icon matPrefix>https</mat-icon>
+        <input matInput type="password" name="password" minlength="8" [(ngModel)]="loginForm.password"
+          #password="ngModel" required>
+        <mat-error *ngIf="password.errors">
+          <mat-error *ngIf="password.errors['required']">
+            {{'login.password.required'|translate}}
+          </mat-error>
+          <mat-error *ngIf="password.errors['minlength']">
+            {{'login.password.minlength'|translate:{'minlength': 8} }}
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+
+    </div>
+
+    <div class="row mt-4">
+      <!-- Forgot password -->
+      <span class="col-md-7 col-sm-12 mb-sm-2 pt-md-2">
+        <a class="text-forgot" routerLink="/forgot-password">{{ 'login.forgot_password' | translate }}</a>
+      </span>
+
+      <!-- Submit -->
+      <div class="col-md-5 col-sm-12 submit-button">
+        <button mat-raised-button color="primary" [disabled]="!f.form.valid">
+          {{ 'login.submit' | translate }}
+        </button>
+      </div>
+
+    </div>
+  </form>
+</app-auth-page>

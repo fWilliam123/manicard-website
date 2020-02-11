@@ -1,10 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { MatIconRegistry } from '@angular/material/icon';
 import { MatSidenav } from '@angular/material/sidenav';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Store } from '@ngxs/store';
+import { TranslateService } from '@ngx-translate/core';
+import { Select, Store } from '@ngxs/store';
+import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
+import { Language } from '../../shared/enums/language.enum';
+import { User } from '../../shared/interfaces/user';
+import { UserService } from '../../shared/services/user.service';
 import { CloseSidenav, OpenSidenav } from '../../shared/states/sidenav.state';
-import { UserState } from '../../shared/states/user.state';
 
 @Component({
   selector: 'app-toolbar',
@@ -13,16 +19,43 @@ import { UserState } from '../../shared/states/user.state';
 })
 export class ToolbarComponent implements OnInit {
 
+  language = new FormControl('');
+  languages: { name: string, value: string }[] = [];
+
   @Input() snav: MatSidenav;
-  user: UserState;
+  @Select(state => state.user) userState$: Observable<User>;
+  user: User;
+
   constructor(
     private readonly matIconRegistry: MatIconRegistry,
     private readonly domSanitizer: DomSanitizer,
     private readonly store: Store,
-    // private readonly userService: UserService
+    private readonly translate: TranslateService,
+    private readonly userService: UserService
   ) { }
 
   ngOnInit(): void {
+    this.userState$.subscribe(user => this.user = user);
+
+    this._initLanguange();
+    this._initIcons();
+    this._onLanguageChange();
+  }
+
+  trackByLanguage(language: { name: string, value: string }): string {
+    return JSON.stringify(language);
+  }
+
+  toggle(): void {
+    this.snav.toggle();
+    this.store.dispatch(this.snav.opened ? new OpenSidenav() : new CloseSidenav());
+  }
+
+  logout(): void {
+    this.userService.sendLogout();
+  }
+
+  private _initIcons(): void {
     this.matIconRegistry.addSvgIcon(
       'user',
       this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/user.svg')
@@ -37,17 +70,20 @@ export class ToolbarComponent implements OnInit {
       'notification',
       this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/notifications.svg')
     );
-
-    // this.userState$.subscribe(user => this.user = user);
-
   }
 
-  toggle(): void {
-    this.snav.toggle();
-    this.store.dispatch(this.snav.opened ? new OpenSidenav() : new CloseSidenav());
+  private _initLanguange(): void {
+    environment.languages.forEach(value =>
+      this.languages.push({ name: Language[value], value })
+    );
+
+    this.language.setValue(localStorage.getItem('language') || this.translate.getDefaultLang());
   }
 
-  logout(): void {
-    // this.userService.sendLogout();
+  private _onLanguageChange(): void {
+    this.language.valueChanges.subscribe((value: string) => {
+      this.translate.use(value);
+      localStorage.setItem('language', value);
+    });
   }
 }

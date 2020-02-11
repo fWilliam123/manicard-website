@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -26,10 +26,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { PageTitleComponent } from './components/page-title/page-title.component';
-
+import { AuthPageComponent } from './components/auth-page/auth-page.component';
 
 const SHARED_MATERIAL = [
   FlexLayoutModule,
+  FormsModule,
+  ReactiveFormsModule,
   MatBadgeModule,
   MatButtonModule,
   MatCardModule,
@@ -60,6 +62,7 @@ const SHARED_LIBRARIES = [
 ];
 
 const SHARED_COMPONENTS = [
+  AuthPageComponent,
   PageTitleComponent
 ];
 

@@ -18,7 +18,6 @@ import { CoreModule } from './core/core.module';
 import { NavService } from './shared/services/nav.service';
 import { SharedModule } from './shared/shared.module';
 import { SidenavState } from './shared/states/sidenav.state';
-import { UserState } from './shared/states/user.state';
 
 @NgModule({
   declarations: [

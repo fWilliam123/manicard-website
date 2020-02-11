@@ -1,0 +1,32 @@
+@import "src/styles/colors";
+
+.logo {
+  text-align: center;
+
+  img {
+    width: 18em;
+    height: 12em;
+  }
+}
+
+.auth-page .image-container {
+  padding-left: 0;
+
+  img {
+    width: inherit;
+    height: 100%;
+  }
+}
+
+mat-sidenav-content.mat-sidenav-content {
+  height: 100%;
+}
+
+.content {
+  padding: 0 4em 0 0;
+}
+
+h1 {
+  font-family: Raleway, sans-serif;
+  color: $orange-darker;
+}

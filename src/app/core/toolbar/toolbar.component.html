@@ -37,5 +37,16 @@
       <mat-icon svgIcon="logout"></mat-icon>
     </button>
 
+    <!-- Select Language -->
+    <small>
+      <mat-form-field>
+        <mat-select [formControl]="language">
+          <mat-option *ngFor="let language of languages; trackBy: trackByLanguage" [value]="language.value">
+            {{ language.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </small>
+
   </div>
 </mat-toolbar>

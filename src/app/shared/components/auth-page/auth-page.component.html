@@ -1,0 +1,26 @@
+<div class="container-fluid auth-page">
+  <div class="row">
+    <div class="col-4 image-container">
+      <img src="/assets/images/auth-page.jpg" />
+    </div>
+    <div class="col-8 content">
+      <div class="row">
+        <div class="col-12 logo">
+          <img src="/assets/images/logo.png" />
+        </div>
+        <div class="col-12">
+          <h1>{{'auth-page.message'|translate}}</h1>
+        </div>
+        <div class="col-12">
+          <p>{{'auth-page.description'|translate}}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-8">
+          <ng-content></ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

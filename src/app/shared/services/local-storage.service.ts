@@ -17,6 +17,17 @@ export class LocalStorageService {
     return localStorage.removeItem(LocalStorageKey.TOKEN);
   }
 
+  // GUID
+  setGuid(token: string): void {
+    return localStorage.setItem(LocalStorageKey.GUID, token);
+  }
+  getGuid(): string {
+    return localStorage.getItem(LocalStorageKey.GUID);
+  }
+  removeGuid(): void {
+    return localStorage.removeItem(LocalStorageKey.GUID);
+  }
+
   // Language
   setLanguage(language: string): void {
     return localStorage.setItem(LocalStorageKey.LANGUAGE, language);

@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
+import { AuthGuard } from '../shared/guards/auth.guard';
 
 
 const routes: Routes = [{
   path: '',
-  component: PagesComponent,
-  // canActivate: [AuthGuard],
-}, /* {
-  path: 'hacker-view',
-  loadChildren: () => import('./hacker-view/hacker-view.module').then(mod => mod.HackerViewModule),
-  canLoad: [AuthGuard],
-}*/];
+  redirectTo: 'login'
+  //component: PagesComponent,
+}, {
+  path: 'login',
+  loadChildren: () => import('./login/login.module').then(mod => mod.LoginModule)
+}];
 
 
 @NgModule({

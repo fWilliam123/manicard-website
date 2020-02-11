@@ -1,4 +1,5 @@
 @import "src/styles/font-weight";
+@import "src/styles/colors";
 
 html,
 body {
@@ -7,7 +8,7 @@ body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif, "Noto Color Emoji";
+  font-family: Regular, sans-serif
 }
 
 .chart-header {
@@ -20,7 +21,7 @@ body {
 
 .widget-header {
   font: $Light 20px/25px Roboto Condensed;
-  color: #001E38;
+  color: $orange-extra-darker;
 
   border-bottom: solid 1px #b8b8b8;
 }
@@ -156,6 +157,11 @@ mat-icon {
   .ip-search {
     width: 223px;
   }
+}
+
+.logo img {
+  width: 8em;
+  padding: 12px;
 }
 
 .link {

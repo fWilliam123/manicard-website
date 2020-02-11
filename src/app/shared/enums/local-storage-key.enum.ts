@@ -1,4 +1,5 @@
 export enum LocalStorageKey {
   TOKEN = 'token',
-  LANGUAGE = 'language'
+  LANGUAGE = 'language',
+  GUID = 'guid'
 }

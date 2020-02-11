@@ -1,17 +1,13 @@
 .footer {
-  height: 84px;
-  padding: 1rem 4rem 0 4rem;
-  background: #ffffff;
   border-top: 1px solid #b8b8b8;
+  background: grey;
+  color: white;
+  // font-family: Raleway, sans-serif;
 
-  p {
-    color: #707070;
-  }
-
-  .mat-form-field {
-    line-height: 1.25;
-    font-size: 14px;
-    width: 100%;
+  .row:first-child {
+    color: white;
+    background-color: black;
+    padding-right: 1em;
   }
 
 }
