@@ -1,0 +1,12 @@
+<app-toolbar *ngIf="logged" [snav]="snav"></app-toolbar>
+<mat-sidenav-container (window:resize)="onResize()">
+  <mat-sidenav #snav [mode]='mode' [opened]="logged && opened" style="width: 247px;">
+    <app-side-nav></app-side-nav>
+  </mat-sidenav>
+  <mat-sidenav-content #pageContainer>
+    <div class="router">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

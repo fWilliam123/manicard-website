@@ -10,6 +10,6 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.preferences.importModuleSpecifier": "relative",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-  },
+    "source.fixAll": true
+  }
 }

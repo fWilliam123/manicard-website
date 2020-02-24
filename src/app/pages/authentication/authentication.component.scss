@@ -1,0 +1,53 @@
+@import "src/styles/colors";
+
+.logo {
+  text-align: center;
+
+  img {
+    width: 14em;
+    height: 10em;
+  }
+}
+
+.bg-color-grey {
+  padding-top: 15em;
+  background-color: #fafafa;
+}
+
+mat-card {
+  position: relative;
+  margin-top: -20em;
+  margin-bottom: 3em;
+  padding: 0;
+}
+
+.fill-default {
+  fill: $orange-darker;
+}
+
+.language-container mat-form-field {
+  width: 7em;
+}
+
+.bg-color {
+  position: relative;
+  background: $orange-darker;
+}
+
+.auth-page-content {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.image-container {
+  background-repeat: no-repeat;
+  border-radius: 5px 0 0 5px;
+  background-size: 100% 100%;
+  background-image: url('/assets/images/auth-page.jpg');
+
+  img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+  }
+}

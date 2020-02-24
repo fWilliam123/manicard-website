@@ -1,0 +1,44 @@
+<app-auth-page-content [description]="'login.description'|translate" [title]="'login.header'|translate">
+  <form name='form' fxLayout="column" fxLayoutAlign="space-between" (ngSubmit)='f.form.valid && onSubmit()' #f="ngForm">
+    <!-- Email -->
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'login.email.title' | translate }}</mat-label>
+      <mat-icon matPrefix>email</mat-icon>
+      <input matInput type="email" name="email" [(ngModel)]="loginForm.Email" #email="ngModel" required email>
+      <mat-error *ngIf="email.errors">
+        <mat-error *ngIf="email.errors['required'] || email.errors['email']">
+          {{'login.email.required'|translate}}
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Password -->
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'login.password.title' | translate }}</mat-label>
+      <mat-icon matPrefix>https</mat-icon>
+      <input matInput type="password" name="password" minlength="3" [(ngModel)]="loginForm.Password" #password="ngModel"
+        required>
+      <mat-error *ngIf="password.errors">
+        <mat-error *ngIf="password.errors['required']">
+          {{'login.password.required'|translate}}
+        </mat-error>
+        <mat-error *ngIf="password.errors['minlength']">
+          {{'login.password.minlength'|translate:{'minlength': 3} }}
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <!--Remember me-->
+    <mat-checkbox>{{'login.remember_me'|translate}}</mat-checkbox>
+
+    <div fxLayout="row" class="mt-4" fxLayoutAlign="space-between center">
+      <!-- Forgot password -->
+      <a class="link" routerLink="/auth/forgot-password">{{ 'login.forgot_password' | translate }}</a>
+
+      <!-- Submit -->
+      <button mat-raised-button color="primary" [disabled]="!f.form.valid">
+        {{ 'login.submit' | translate }}
+      </button>
+    </div>
+  </form>
+</app-auth-page-content>

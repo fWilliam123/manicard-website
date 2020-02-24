@@ -26,7 +26,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { PageTitleComponent } from './components/page-title/page-title.component';
-import { AuthPageComponent } from './components/auth-page/auth-page.component';
+import { AuthPageContentComponent } from './components/auth-page-content/auth-page-content.component';
 
 const SHARED_MATERIAL = [
   FlexLayoutModule,
@@ -52,6 +52,7 @@ const SHARED_MATERIAL = [
   MatTooltipModule,
   MatChipsModule,
   MatProgressSpinnerModule,
+
   MatCheckboxModule
 ];
 
@@ -62,7 +63,7 @@ const SHARED_LIBRARIES = [
 ];
 
 const SHARED_COMPONENTS = [
-  AuthPageComponent,
+  AuthPageContentComponent,
   PageTitleComponent
 ];
 

@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PagesComponent } from './pages.component';
-import { AuthGuard } from '../shared/guards/auth.guard';
 
 
 const routes: Routes = [{
   path: '',
   redirectTo: 'login'
-  //component: PagesComponent,
 }, {
-  path: 'login',
-  loadChildren: () => import('./login/login.module').then(mod => mod.LoginModule)
+  path: 'auth',
+  loadChildren: () => import('./authentication/authentication.module').then(mod => mod.AuthenticationModule)
+}, {
+  path: 'dashboard',
+  loadChildren: () => import('./dashboard/dashboard.module').then(mod => mod.DashboardModule)
 }];
-
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

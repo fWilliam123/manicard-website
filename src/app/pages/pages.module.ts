@@ -3,10 +3,8 @@ import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../shared/shared.module';
 import { PagesRoutingModule } from './pages-routing.module';
-import { PagesComponent } from './pages.component';
 
 @NgModule({
-  declarations: [PagesComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,

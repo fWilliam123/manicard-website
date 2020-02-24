@@ -7,9 +7,19 @@
 
     <p>{{'footer.follow_us'|translate}}</p>
   </div>
-  <div class="row">
-    <div class="col-md-6 col-lg-6 col-sm-6">
-      <p>{{ 'footer.copyright_line' | translate:{year:year} }}</p>
-    </div>
+
+  <div class="row" fxLayoutAlign="space-between center">
+    <p>{{ 'footer.copyright_line' | translate:{year:year} }}</p>
+
+    <!-- Select Language -->
+    <small>
+      <mat-form-field>
+        <mat-select panelClass="custom" [formControl]="language">
+          <mat-option *ngFor="let language of languages; trackBy: trackByLanguage" [value]="language.value">
+            {{ language.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </small>
   </div>
 </div>

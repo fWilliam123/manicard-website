@@ -1,6 +1,7 @@
+import { Injectable } from '@angular/core';
 import { Action, State, StateContext } from '@ngxs/store';
-import { StateName } from '../enums/state-name.enum';
-import { User } from '../interfaces/user';
+import { StateName } from '../enums';
+import { User } from '../interfaces';
 
 export class Login {
   static readonly type = '[User] Login';
@@ -15,6 +16,9 @@ export class Logout {
 @State<boolean>({
   name: StateName.USER,
   defaults: true
+})
+@Injectable({
+  providedIn: 'root'
 })
 export class UserState {
   @Action(Login)

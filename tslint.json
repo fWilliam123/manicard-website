@@ -80,7 +80,7 @@
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
-    "no-use-before-declare": true,
+
     "no-var-requires": false,
     "object-literal-key-quotes": [
       true,
@@ -129,8 +129,7 @@
       true,
       "call-signature",
       "property-declaration",
-      "object-destructuring",
-      "arrow-call-signature"
+      "object-destructuring"
     ],
     "no-unused": true,
     "no-return-undefined": true,
@@ -222,7 +221,10 @@
       true,
       "check-function-in-method"
     ],
-    "no-unbound-method": true,
+    "no-unbound-method": [
+      true,
+      "ignore-static"
+    ],
     "prefer-readonly": true,
     "radix": false,
     "no-misused-new": true,

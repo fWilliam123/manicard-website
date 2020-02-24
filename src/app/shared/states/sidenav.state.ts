@@ -1,5 +1,6 @@
+import { Injectable } from '@angular/core';
 import { Action, State, StateContext } from '@ngxs/store';
-import { StateName } from '../enums/state-name.enum';
+import { StateName } from '../enums';
 
 export class CloseSidenav {
   static readonly type = '[Sidenav] CloseSidenav';
@@ -17,6 +18,9 @@ export interface SidenavModel {
 @State<boolean>({
   name: StateName.SIDENAV,
   defaults: true
+})
+@Injectable({
+  providedIn: 'root'
 })
 export class SidenavState {
 

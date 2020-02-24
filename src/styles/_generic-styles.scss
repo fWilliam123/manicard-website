@@ -8,15 +8,8 @@ body {
 
 body {
   margin: 0;
+  color: grey;
   font-family: Regular, sans-serif
-}
-
-.chart-header {
-  text-align: left;
-  font-family: Regular, sans-serif;
-  font-size: 16px;
-  color: #707070;
-  opacity: 1;
 }
 
 .widget-header {
@@ -24,14 +17,6 @@ body {
   color: $orange-extra-darker;
 
   border-bottom: solid 1px #b8b8b8;
-}
-
-.widget-header-target {
-  height: 2.5em;
-}
-
-.widget-header-analysis {
-  height: 1.3em;
 }
 
 mat-icon {
@@ -43,121 +28,6 @@ mat-icon {
   color: #707070;
 }
 
-.summary-description {
-  padding-right: 15px;
-
-  p {
-    line-height: 21px;
-    text-align: left;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 0;
-  }
-}
-
-.summary-description.custom-scrollbar {
-  border-radius: 0;
-}
-
-// Medium devices (tablets, 768px and up)
-@media (max-width: 990px) {
-  .widget-header-height {
-    min-height: 1.5em;
-    max-height: 3.5em;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .widget-header-height {
-    min-height: 1em;
-    max-height: 3.5em;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) and (max-width: 1480px) {
-
-  .widget-header-height-protect,
-  .widget-header-height-detect,
-  .widget-header-height-react,
-  .widget-header-height-sensitize {
-    min-height: 2.5em;
-    max-height: 3.5em;
-  }
-}
-
-@media (min-width: 1315px) {
-  .widget-header-height-detect {
-    min-height: 1.5em;
-    max-height: 3.5em;
-  }
-}
-
-@media (min-width: 1463px) {
-  .widget-header-height-sensitize {
-    min-height: 1.5em;
-    max-height: 3.5em;
-  }
-}
-
-@media (min-width: 1370px) {
-  .widget-header-height-react {
-    min-height: 1.5em;
-    max-height: 3.5em;
-  }
-}
-
-@media (min-width: 1480px) {
-  .widget-header-height-protect {
-    min-height: 1.5em;
-    max-height: 3.5em;
-  }
-}
-
-@media(max-width: 1650px) and (min-width: 992px) {
-  .widget-header-ext-perimeter {
-    height: 2.5em;
-  }
-}
-
-@media(max-width: 990px) {
-  .widget-header-ext-perimeter {
-    height: 1.5em;
-  }
-}
-
-//custom search material
-.mat-search-custom {
-  font-size: 14px;
-  width: 323px;
-  padding-top: 1em;
-
-  .mat-icon {
-    font-size: 20px;
-    position: relative;
-    top: 0.2em;
-  }
-}
-
-@media(min-width: 1200px) and (max-width: 1460px) {
-  .ip-search {
-    width: 223px;
-  }
-}
-
-@media(max-width: 1200px) and (min-width: 760px) {
-  .ip-search {
-    width: 350px;
-  }
-}
-
-
-@media(max-width: 760px) {
-  .ip-search {
-    width: 223px;
-  }
-}
 
 .logo img {
   width: 8em;
@@ -167,11 +37,6 @@ mat-icon {
 .link {
   color: black;
   text-decoration: none;
-}
-
-// inscrease font-size of pie-label
-.ngx-charts .pie-label {
-  font-size: 15px;
 }
 
 //scrollbar

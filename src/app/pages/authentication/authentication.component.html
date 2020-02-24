@@ -1,0 +1,42 @@
+<div class="container-fuid auth-page-container" fxFill fxLayout="column">
+  <div fxFlex="60" class="bg-color-grey" fxLayout="column" fxLayoutAlign="end">
+    <svg x="0" y="0" height="100" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+      xmlns="http://www.w3.org/2000/svg">
+      <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+
+  <div class="bg-color" fxFlex>
+    <div class="container">
+      <!--Card-->
+      <mat-card>
+        <mat-card-content fxLayout="row">
+          <!--First row-->
+          <div fxFlex.lg="40" fxFlex.xl="40" fxFlex.md="0" class="image-container"></div>
+
+          <!--Second row-->
+          <div fxFlex class="container auth-page-content" fxLayout="column" fxLayoutAlign="space-between">
+            <!-- Select Language -->
+            <small class="language-container" fxLayoutAlign="end">
+              <mat-form-field>
+                <mat-select panelClass="custom" [formControl]="language">
+                  <mat-option *ngFor="let language of languages; trackBy: trackByLanguage" [value]="language.value">
+                    {{ language.name }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </small>
+
+            <!--Logo-->
+            <div class="logo">
+              <img src="/assets/images/logo.png" />
+            </div>
+
+            <router-outlet></router-outlet>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+</div>

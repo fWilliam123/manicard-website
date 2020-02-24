@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { Language } from '../../shared/enums/language.enum';
 import { environment } from '../../../environments/environment';
+import { Language } from '../../shared/enums';
 
 @Component({
   selector: 'app-footer',

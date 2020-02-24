@@ -22,7 +22,7 @@ app-sidenav .mat-list-base .mat-list-item .mat-list-icon {
 
 .mat-list-base .mat-list-item {
   color: #ffffff;
-  border-bottom: 2px solid $orange-darker;
+  border-bottom: 2px solid $orange-extra-darker;
   font-family: 'Raleway', sans-serif;
   background-color: $orange-darker;
 
@@ -71,8 +71,12 @@ mat-sidenav-content.mat-sidenav-content {
   background-color: #eeeeee;
 }
 
+app-dashboard {
+  min-height: calc(93.9vh - 184px);
+}
+
 router-outlet+* {
-  min-height: calc(100vh - 184px);
+  height: 100%;
   display: block;
 }
 
@@ -90,7 +94,7 @@ mat-toolbar.mat-title {
     font-family: 'Raleway', sans-serif;
     font-weight: $Medium;
     font-size: 28px;
-    color: $orange-darker;
+    color: $orange-extra-light;
   }
 }
 
@@ -106,7 +110,6 @@ mat-toolbar.mat-title {
 
 mat-form-field.mat-form-field {
   font-family: Roboto, sans-serif;
-  font-size: 18px;
 
   label,
   input {

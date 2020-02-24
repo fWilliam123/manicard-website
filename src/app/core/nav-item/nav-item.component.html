@@ -22,8 +22,8 @@
   </ng-container>
 
   <ng-container *ngSwitchDefault>
-    <a mat-list-item [routerLink]="item.route" routerLinkActive="active" [replaceUrl]="true"
-      [routerLinkActiveOptions]="{exact:true}" class="menu-list-item">
+    <a mat-list-item [routerLink]="item.route" routerLinkActive="active" [replaceUrl]="true" [routerLinkActiveOptions]="{exact:true}"
+      class="menu-list-item">
       <mat-icon class="routeIcon" matListIcon svgIcon="{{item.iconName}}"></mat-icon>
       <div class="text-wrapper">{{ 'menu.' + item.displayName | translate }}</div>
     </a>

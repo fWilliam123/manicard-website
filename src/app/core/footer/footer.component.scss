@@ -4,22 +4,36 @@
   color: white;
   // font-family: Raleway, sans-serif;
 
+  .row {
+    padding: 0 1rem 0 1rem;
+  }
+
+
+  .logo {
+    padding: 1em 0 1em 0;
+  }
+
+  .logo img {
+    padding: 0;
+    width: 5em;
+  }
+
   .row:first-child {
     color: white;
     background-color: black;
-    padding-right: 1em;
   }
 
-}
-
-@media (max-width: 1199.98px) {
-  .footer {
-    padding: 1rem 1rem 0 1rem;
-  }
 }
 
 @media (max-width: 578px) {
   .footer {
     height: 130px;
   }
+}
+
+
+.mat-form-field {
+  line-height: 1.25;
+  font-size: 14px;
+  width: 100%;
 }

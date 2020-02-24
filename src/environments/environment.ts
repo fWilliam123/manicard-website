@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  host_api: 'https://manicards.ca',
+  host_api: 'https://api.manicards.com',
   languages: ['fr-CA', 'en-CA'],
 };
 

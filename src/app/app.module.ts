@@ -1,8 +1,6 @@
 // Angular
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { MatListModule } from '@angular/material/list';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Libraries
@@ -14,10 +12,8 @@ import { NgxsModule } from '@ngxs/store';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
-import { NavService } from './shared/services/nav.service';
-import { SharedModule } from './shared/shared.module';
-import { SidenavState } from './shared/states/sidenav.state';
+import { NavService } from './shared/services';
+import { SidenavState, UserState } from './shared/states';
 
 @NgModule({
   declarations: [
@@ -33,7 +29,7 @@ import { SidenavState } from './shared/states/sidenav.state';
     // State Management
     NgxsModule.forRoot([
       SidenavState,
-      // UserState,
+      UserState,
     ], {
       developmentMode: !environment.production,
     }),
@@ -51,14 +47,8 @@ import { SidenavState } from './shared/states/sidenav.state';
       }
     }),
 
-    // Material
-    MatSidenavModule,
-    MatListModule,
-
     // App
     AppRoutingModule,
-    CoreModule,
-    SharedModule,
 
   ],
   providers: [

@@ -51,8 +51,8 @@ export class ToolbarComponent implements OnInit {
     this.store.dispatch(this.snav.opened ? new OpenSidenav() : new CloseSidenav());
   }
 
-  logout(): void {
-    this.userService.sendLogout();
+  onLogout(): void {
+    this.userService.logout();
   }
 
   private _initIcons(): void {
