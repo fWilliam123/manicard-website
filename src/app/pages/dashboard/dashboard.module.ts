@@ -6,10 +6,9 @@ import { CoreModule } from '../../core/core.module';
 import { SharedModule } from '../../shared/shared.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { HomeDashboardComponent } from './home-dashboard/home-dashboard.component';
 
 @NgModule({
-  declarations: [DashboardComponent, HomeDashboardComponent],
+  declarations: [DashboardComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,

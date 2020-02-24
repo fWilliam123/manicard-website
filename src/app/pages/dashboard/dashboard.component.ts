@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import { MatSidenav, MatDrawerMode } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
@@ -14,7 +14,7 @@ import { SidenavState, UserState } from '../../shared/states';
 })
 export class DashboardComponent implements OnInit {
 
-  mode = 'side';
+  mode: MatDrawerMode;
   logged = true;
   opened = true;
 
@@ -29,6 +29,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.mode = 'side';
     // Setup user state
     this.userState$.subscribe({
       next: (user: User): void => {

@@ -31,7 +31,7 @@ export class AuthenticationComponent implements OnInit {
 
   }
 
-  trackByLanguage(language: { name: string, value: string }): string {
+  trackByLanguage(_: number, language: { name: string, value: string }): string {
     return JSON.stringify(language);
   }
 

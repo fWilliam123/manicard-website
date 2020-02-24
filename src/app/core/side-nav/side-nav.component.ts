@@ -13,6 +13,12 @@ export class SideNavComponent {
 
   navItems: NavItem[] = [
     {
+      displayName: 'extract_data',
+      iconName: 'assets/images/PNG-04.png',
+      route: '/dashboard',
+      rappidLink: true
+    },
+    {
       displayName: 'home',
       iconName: 'dashboard',
       route: '/dashboard'

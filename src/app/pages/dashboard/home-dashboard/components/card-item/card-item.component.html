@@ -1,1 +1,6 @@
-<p>card-item works!</p>
+<mat-card [ngClass]="{'current': index===selectedIndex}">
+  <mat-card-content fxLayout="column" fxLayoutAlign="none end">
+    <h3>{{item.total}}</h3>
+    <span>{{item.description | titlecase}}</span>
+  </mat-card-content>
+</mat-card>

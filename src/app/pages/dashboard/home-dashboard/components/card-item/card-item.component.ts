@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CardItemInput } from '../../interfaces';
 
 @Component({
   selector: 'app-card-item',
@@ -6,15 +7,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./card-item.component.scss']
 })
 export class CardItemComponent implements OnInit {
-  @Input() title: string;
-  @Input() numberItems: number;
-  @Output() readonly selectedCard: EventEmitter<string> = new EventEmitter<string>();
+  @Input() item: CardItemInput;
+  @Input() index: number;
+  @Input() selectedIndex: number;
 
   ngOnInit(): void {
-  }
-
-  onSelectedCard(): void {
-    this.selectedCard.emit();
   }
 
 }

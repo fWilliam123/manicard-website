@@ -1,4 +1,10 @@
 <ng-container [ngSwitch]="true">
+  <div *ngSwitchCase="item.rappidLink" class="rappid-link-container">
+    <a mat-list-item [routerLink]="item.route" [replaceUrl]="true" class="rappid-link" fxLayout="row">
+      <img class="imageIcon" matListIcon src="{{item.iconName}}" />
+      <div class="text-wrapper" mat-line>{{item.displayName}}</div>
+    </a>
+  </div>
 
   <ng-container *ngSwitchCase="item.children?.length > 0">
     <a mat-list-item (click)="onParentContainerClick()" [ngClass]="{'expanded': expanded, 'menu-list-item': true}">
@@ -22,8 +28,8 @@
   </ng-container>
 
   <ng-container *ngSwitchDefault>
-    <a mat-list-item [routerLink]="item.route" routerLinkActive="active" [replaceUrl]="true" [routerLinkActiveOptions]="{exact:true}"
-      class="menu-list-item">
+    <a mat-list-item [routerLink]="item.route" routerLinkActive="active" [replaceUrl]="true"
+      [routerLinkActiveOptions]="{exact:true}" class="menu-list-item">
       <mat-icon class="routeIcon" matListIcon svgIcon="{{item.iconName}}"></mat-icon>
       <div class="text-wrapper">{{ 'menu.' + item.displayName | translate }}</div>
     </a>

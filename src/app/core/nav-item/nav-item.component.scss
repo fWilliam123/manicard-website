@@ -1,3 +1,5 @@
+@import "src/styles/colors";
+
 :host {
   display: flex;
   flex-direction: column;
@@ -11,6 +13,29 @@
 
   .routeIcon {
     margin-right: 10px;
+  }
+}
+
+.rappid-link-container:not {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.rappid-link-container {
+  padding: 0 0.5em 2em 0.5em;
+  border-bottom: 2px solid white;
+
+  .rappid-link {
+    border-radius: 7px;
+    background-color: white;
+    color: $orange-darker;
+    margin-bottom: 0.5em;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
   }
 }
 

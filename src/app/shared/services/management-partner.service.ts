@@ -19,14 +19,14 @@ export class ManagementPartnerService {
   /**
    * Retrieve the list of actions in progress
    */
-  getActionsInProgress(): Observable<Request> {
-    return this.http.get<Request>(`${environment.host_api}api/manicardsclient/getall/${this.localStorageService.getGuid()}/${ObjectType.Request}`);
+  getActionsInProgress(): Observable<Request[]> {
+    return this.http.get<Request[]>(`${environment.get_all_entities_instances_url}/${this.localStorageService.getGuid()}/${ObjectType.Request}`);
   }
 
   /**
    * Retrieve the details of actions in progress
    */
   getDetailActionsInProgress(id: string): Observable<Request> {
-    return this.http.get<Request>(`${environment.host_api}api/manicardsclient/getall/${this.localStorageService.getGuid()}/${ObjectType.Request}/${id}`);
+    return this.http.get<Request>(`${environment.get_all_entities_instances_url}/${this.localStorageService.getGuid()}/${ObjectType.Request}/${id}`);
   }
 }

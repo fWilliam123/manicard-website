@@ -1,11 +1,13 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NavItem } from '../../shared/interfaces';
 import { NavService } from '../../shared/services';
+import { soonSnackBar } from '../../shared/utils';
 
 @Component({
   selector: 'app-nav-item',
@@ -32,7 +34,7 @@ export class NavItemComponent implements OnInit {
     public readonly router: Router,
     private readonly matIconRegistry: MatIconRegistry,
     private readonly domSanitizer: DomSanitizer,
-    // private readonly snackBar: EasySnackBarService,
+    private readonly snackBar: MatSnackBar,
     private readonly translate: TranslateService
   ) {
   }
@@ -49,7 +51,7 @@ export class NavItemComponent implements OnInit {
   }
 
   onDisabledContainerClick(): void {
-    // this.translate.get('snackbar.link_soon').subscribe(value => this.snackBar.soon(value));
+    this.translate.get('snackbar.link_soon').subscribe(value => soonSnackBar(this.snackBar, value));
   }
 
   onParentContainerClick(): void {
@@ -64,6 +66,11 @@ export class NavItemComponent implements OnInit {
     this.matIconRegistry.addSvgIcon(
       'dashboard',
       this.domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/menu-dashboard.svg')
+    );
+
+    this.matIconRegistry.addSvgIcon(
+      'extract',
+      this.domSanitizer.bypassSecurityTrustResourceUrl('assets/images/PNG-04.png')
     );
   }
 
