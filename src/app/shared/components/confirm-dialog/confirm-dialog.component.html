@@ -1,0 +1,16 @@
+<span mat-dialog-title>{{data.titleTranslationKey|translate}}</span>
+
+<mat-dialog-content>
+  <div class="row mt-2">
+    <div class="col-12 message">
+      <p> {{ data.message }} </p>
+    </div>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="py-2">
+  <button mat-button mat-dialog-close class="close">{{'actions.cancel'|translate}}</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="data.id">
+    {{ data.buttonTranslationKey | translate }}
+  </button>
+</mat-dialog-actions>

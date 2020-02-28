@@ -34,6 +34,9 @@ $manicard-website-theme: mat-light-theme($manicard-website-primary, $manicard-we
 @import "styles/font-weight";
 @import "styles/generic-styles";
 @import "styles/layout";
+@import "styles/mat-accordion";
+@import "styles/mat-table";
+@import "styles/mat-dialog";
 
 @font-face {
   font-family: Raleway, sans-serif;

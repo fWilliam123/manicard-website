@@ -4,6 +4,10 @@ import { AuthenticationComponent } from './authentication.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'login'
+  },
+  {
     path: 'login',
     component: AuthenticationComponent,
     loadChildren: () => import('./login/login.module').then(mod => mod.LoginModule)

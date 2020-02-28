@@ -1,0 +1,79 @@
+@import "src/styles/font-weight";
+@import "src/styles/colors";
+
+.mat-header-cell,
+.mat-cell {
+  padding: 1em;
+  word-break: keep-all;
+}
+
+.select-header .mat-checkbox-inner-container {
+  background-color: white;
+  border-radius: 2px;
+}
+
+.mat-header-cell {
+  background: $orange-darker 0% 0% no-repeat padding-box;
+  text-align: left;
+  font: $Bold 16px/21px Roboto;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  font-weight: normal;
+}
+
+.mat-cell {
+  text-align: left;
+  font: $Regular 14px/19px Roboto;
+  letter-spacing: 0;
+  color: #111111;
+}
+
+.mat-cell {
+  vertical-align: baseline;
+
+  ul {
+    padding-left: 24px;
+    margin: 0;
+    list-style: none;
+
+    li::before {
+      content: "\2022";
+      color: #b8b8b8;
+      font-weight: bold;
+      display: inline-block;
+      width: 0.8em;
+      margin-left: -1em;
+    }
+  }
+}
+
+.mat-cell {
+  font: $Regular 14px/19px Roboto;
+  color: #111111;
+}
+
+.cell-color {
+  background-color: #e8f3fd;
+}
+
+// Sticky
+
+.overflow {
+  overflow-x: auto;
+}
+
+.mat-table-sticky:first-child {
+  border-right: 1px solid #e0e0e0;
+}
+
+.mat-table-sticky:last-child {
+  border-left: 1px solid #e0e0e0;
+}
+
+.mat-column-actions .mat-sort-header-container {
+  justify-content: center;
+}
+
+.mat-row .mat-column-actions {
+  text-align: center;
+}

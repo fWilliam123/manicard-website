@@ -1,0 +1,107 @@
+@import "src/styles/colors";
+
+.user-infos {
+  div {
+    line-height: 2em;
+
+    span {
+      font-weight: 700;
+      font-size: 18px;
+      font-family: Roboto, sans-serif;
+    }
+  }
+}
+
+mat-dialog-content {
+
+  font-family: Raleway, sans-serif;
+}
+
+.mat-expansion-panel-header {
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  padding-left: 0;
+  background-color: grey;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.mat-expansion-panel {
+  background-color: whitesmoke;
+}
+
+.discount-content {
+  padding-bottom: 1em;
+}
+
+.card-content,
+.discount-content {
+  font-size: 15px;
+  padding-top: 1em;
+
+  .customer {
+    color: $orange-light;
+  }
+}
+
+mat-card {
+  padding: 5px 1em 0 5px;
+  border-radius: 8px;
+}
+
+.icon-container img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.image-container {
+  min-height: 10em;
+
+  img {
+    min-height: inherit;
+    width: auto;
+    border-radius: 8px;
+    max-width: 100%;
+  }
+}
+
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]),
+.mat-expansion-panel-header:hover,
+.mat-expansion-panel-header:focus,
+.mat-expansion-panel-header:active {
+  background-color: grey;
+}
+
+.mat-list-base .mat-list-item {
+  box-shadow: none;
+  background-color: inherit;
+  border-bottom: none;
+  color: white;
+}
+
+.content {
+  background-color: whitesmoke;
+}
+
+.list-content {
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+
+  .number-card {
+    font-weight: 600;
+  }
+}
+
+.mat-list-base .mat-list-item .mat-list-icon {
+  height: auto;
+  width: 2em;
+}
+
+.icon-img {
+  img {
+    width: auto;
+    height: 100%;
+  }
+}

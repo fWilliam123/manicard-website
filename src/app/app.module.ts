@@ -1,6 +1,8 @@
 // Angular
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { MatPaginatorIntl } from '@angular/material/paginator';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Libraries
@@ -12,6 +14,7 @@ import { NgxsModule } from '@ngxs/store';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CustomMatPaginatorIntl, FormErrorStateMatcher } from './shared/classes';
 import { NavService } from './shared/services';
 import { SidenavState, UserState } from './shared/states';
 
@@ -53,6 +56,8 @@ import { SidenavState, UserState } from './shared/states';
   ],
   providers: [
     NavService,
+    { provide: MatPaginatorIntl, useClass: CustomMatPaginatorIntl },
+    { provide: ErrorStateMatcher, useClass: FormErrorStateMatcher }
   ],
   bootstrap: [AppComponent]
 })

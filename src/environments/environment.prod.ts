@@ -1,4 +1,4 @@
-const hostAPI = 'https://api.manicards.com';
+const hostAPI = 'http://api.manicards.com';
 const link = `${hostAPI}/api/manicardsclient`;
 
 export const environment = {

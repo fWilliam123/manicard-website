@@ -8,9 +8,9 @@ import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { Language } from '../../shared/enums/language.enum';
-import { User } from '../../shared/interfaces/user';
 import { UserService } from '../../shared/services/user.service';
 import { CloseSidenav, OpenSidenav } from '../../shared/states/sidenav.state';
+import { User } from '../../pages/dashboard/user-management/interfaces';
 
 @Component({
   selector: 'app-toolbar',

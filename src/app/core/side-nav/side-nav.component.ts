@@ -3,6 +3,9 @@ import { marker } from '@biesbjerg/ngx-translate-extract-marker';
 import { NavItem } from '../../shared/interfaces';
 
 marker('menu.home');
+marker('menu.user_management.title');
+marker('menu.user_management.users');
+marker('menu.user_management.user_group');
 
 @Component({
   selector: 'app-side-nav',
@@ -20,8 +23,20 @@ export class SideNavComponent {
     },
     {
       displayName: 'home',
-      iconName: 'dashboard',
+      iconName: '',
       route: '/dashboard'
+    },
+    {
+      displayName: 'user_management.title',
+      iconName: '',
+      route: '/dashboard/user-management',
+      children: [
+        {
+          displayName: 'user_management.users',
+          iconName: '',
+          route: '/dashboard/user-management/users',
+        },
+      ]
     },
   ];
 

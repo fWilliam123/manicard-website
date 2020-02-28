@@ -1,0 +1,55 @@
+.form-container {
+  padding: 4em 0;
+}
+
+.mat-card-title {
+  background-color: #001E38;
+  color: white;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  line-height: 27px;
+}
+
+.mat-form-field {
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.text-forgot {
+  color: #001E38;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.mat-card>.mat-card-actions:last-child {
+  padding-bottom: 30px;
+  padding-right: 35px;
+}
+
+button,
+.text-forgot {
+  font-family: 'Raleway', sans-serif;
+}
+
+.mat-card-content {
+  margin-bottom: 0;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-card-content,
+.mat-card-title {
+  padding: 16px 30px;
+}
+
+.mat-card {
+  padding: 0;
+  width: 25em;
+}
+
+.submit-button {
+  text-align: right;
+}

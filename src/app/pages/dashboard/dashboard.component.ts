@@ -4,8 +4,8 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { filter, skip } from 'rxjs/operators';
-import { User } from '../../shared/interfaces';
 import { SidenavState, UserState } from '../../shared/states';
+import { User } from './user-management/interfaces';
 
 @Component({
   selector: 'app-dashboard',

@@ -7,10 +7,10 @@ import { finalize } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { LoginForm } from '../../pages/authentication/login/interfaces/login-form';
 import { LoginResponse } from '../../pages/authentication/login/interfaces/login-response';
-import { User } from '../interfaces/user';
 import { Login, Logout } from '../states/user.state';
 import { LocalStorageService } from './local-storage.service';
 import { ResetPasswordForm } from '../../pages/authentication/reset-password/interfaces';
+import { User } from '../../pages/dashboard/user-management/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -86,7 +86,7 @@ export class UserService {
    * Get infos of user
    */
   private _userInfos(): Observable<User> {
-    return this.http.get<User>(`${environment.host_api}/api/manicardsclient/login`);
+    return this.http.get<User>(`${environment.get_entitie_instance_url}/api/manicardsclient/login`);
   }
 
   /**

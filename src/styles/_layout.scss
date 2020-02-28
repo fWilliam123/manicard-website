@@ -26,9 +26,10 @@ app-sidenav .mat-list-base .mat-list-item .mat-list-icon {
   font-family: 'Raleway', sans-serif;
   background-color: $orange-darker;
 
+  box-shadow: inset -12px 0 9px -12px rgba(0, 0, 0, 0.7);
+
   &.active {
     background-color: $orange-light;
-    box-shadow: inset -12px 0 9px -12px rgba(0, 0, 0, 0.7);
   }
 
   .mat-list-item-content {
@@ -37,16 +38,16 @@ app-sidenav .mat-list-base .mat-list-item .mat-list-icon {
 }
 
 .sub-menu {
-  background-color: #001527;
+  background-color: $orange-extra-darker;
 
   .mat-list-item {
     border-bottom: none;
-    background-color: #001527;
+    background-color: $orange-extra-darker;
 
     .text-wrapper {
 
       width: 100%;
-      border-bottom: 1px solid #093e6c;
+      border-bottom: 1px solid $orange-darker;
       padding-bottom: 16px;
       padding-top: 16px;
       font-size: 0.9rem;
@@ -94,8 +95,14 @@ mat-toolbar.mat-title {
     font-family: 'Raleway', sans-serif;
     font-weight: $Medium;
     font-size: 28px;
-    color: $orange-extra-light;
+    color: $orange-darker;
   }
+}
+
+.mat-raised-button {
+  font-family: 'Raleway', sans-serif;
+  background-color: #011e38;
+  color: white;
 }
 
 .wrapper-content {
@@ -114,9 +121,4 @@ mat-toolbar.mat-title {
 
 mat-form-field.mat-form-field {
   font-family: Roboto, sans-serif;
-
-  label,
-  input {
-    margin-left: 5px;
-  }
 }

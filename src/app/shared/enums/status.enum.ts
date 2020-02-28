@@ -1,0 +1,8 @@
+export enum Status {
+  UNDEFINED,
+  PENDING,
+  ACTIVE,
+  INACTIVE,
+  ARCHIVING,
+  ARCHIVED
+}

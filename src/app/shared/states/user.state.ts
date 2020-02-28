@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Action, State, StateContext } from '@ngxs/store';
 import { StateName } from '../enums';
-import { User } from '../interfaces';
+import { User } from '../../pages/dashboard/user-management/interfaces';
 
 export class Login {
   static readonly type = '[User] Login';

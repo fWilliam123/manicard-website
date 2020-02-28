@@ -1,0 +1,27 @@
+@import "src/styles/font-weight";
+@import "src/styles/colors";
+
+.mat-dialog-content {
+  border-top: 2px solid $orange-darker;
+}
+
+.mat-dialog-title {
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 0;
+  color: #707070;
+  opacity: 1;
+  text-overflow: ellipsis;
+  max-lines: 2;
+  overflow: hidden;
+}
+
+.mat-dialog-actions {
+
+  .mat-button-base .mat-button-wrapper {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+  }
+}

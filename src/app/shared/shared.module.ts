@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -25,8 +25,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { PageTitleComponent } from './components/page-title/page-title.component';
 import { AuthPageContentComponent } from './components/auth-page-content/auth-page-content.component';
+import { PageTitleComponent } from './components/page-title/page-title.component';
+import { IntlDatePipe } from './pipes/intl-date.pipe';
+import { IntlDateTimePipe } from './pipes/intl-date-time.pipe';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 const SHARED_MATERIAL = [
   FlexLayoutModule,
@@ -52,7 +55,6 @@ const SHARED_MATERIAL = [
   MatTooltipModule,
   MatChipsModule,
   MatProgressSpinnerModule,
-
   MatCheckboxModule
 ];
 
@@ -67,14 +69,22 @@ const SHARED_COMPONENTS = [
   PageTitleComponent
 ];
 
+const SHARED_PIPES = [
+  IntlDatePipe,
+  IntlDateTimePipe,
+]
+
 @NgModule({
   declarations: [
     SHARED_COMPONENTS,
+    SHARED_PIPES,
+    ConfirmDialogComponent
   ],
   exports: [
     SHARED_MATERIAL,
     SHARED_LIBRARIES,
     SHARED_COMPONENTS,
+    SHARED_PIPES
   ],
   imports: [
     CommonModule,

@@ -1,3 +1,4 @@
+export * from './mappings'
 export * from './easy-snack-bar.service'
 export * from './local-storage.service'
 export * from './nav.service'

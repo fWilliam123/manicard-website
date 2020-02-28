@@ -1,0 +1,35 @@
+@import "src/styles/colors";
+@import "src/styles/font-weight";
+
+.status {
+  border-radius: 5px;
+  text-align: center;
+  font: $Bold 14px/25px Roboto;
+  width: 12em;
+  padding: 0.3em 0;
+  color: #FFFFFF;
+}
+
+.status.undefined-status {
+  background-color: $color-none;
+}
+
+.status.pending-status {
+  background-color: $color-warning;
+}
+
+.status.inactive-status {
+  background-color: $color-danger;
+}
+
+.status.archiving-status {
+  background-color: $color-medium;
+}
+
+.status.inarchiving-status {
+  background-color: $color-invalid;
+}
+
+.status.active-status {
+  background-color: $color-success;
+}
