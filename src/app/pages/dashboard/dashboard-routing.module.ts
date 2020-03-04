@@ -1,18 +1,27 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 
 const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
-    loadChildren: () => import('./home-dashboard/home-dashboard.module').then(mod => mod.HomeDashboardModule)
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./home-dashboard/home-dashboard.module').then(mod => mod.HomeDashboardModule)
+      },
+      {
+        path: 'user-management',
+        loadChildren: () => import('./user-management/user-management.module').then(mod => mod.UserManagementModule)
+      },
+      {
+        path: 'trade-management',
+        loadChildren: () => import('./trade-management/trade-management.module').then(mod => mod.TradeManagementModule)
+      },
+    ]
   },
-  {
-    path: 'user-management',
-    component: DashboardComponent,
-    loadChildren: () => import('./user-management/user-management.module').then(mod => mod.UserManagementModule)
-  },
+
 ];
 
 @NgModule({

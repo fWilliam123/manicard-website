@@ -6,6 +6,7 @@ marker('menu.home');
 marker('menu.user_management.title');
 marker('menu.user_management.users');
 marker('menu.user_management.user_group');
+marker('menu.trade_management');
 
 @Component({
   selector: 'app-side-nav',
@@ -37,11 +38,16 @@ export class SideNavComponent {
           route: '/dashboard/user-management/users',
         },
         {
-          displayName: 'user_management.user-group',
+          displayName: 'user_management.user_group',
           iconName: '',
           route: '/dashboard/user-management/user-group',
         },
       ]
+    },
+    {
+      displayName: 'trade_management',
+      iconName: '',
+      route: '/dashboard/trade-management'
     },
   ];
 

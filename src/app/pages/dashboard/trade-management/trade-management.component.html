@@ -1,0 +1,35 @@
+<app-page-title title="{{ 'menu.trade_management' | translate }}"></app-page-title>
+
+<div class="container-fluid wrapper-content">
+
+  <mat-accordion [multi]="true">
+    <!-- Total -->
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        {{ 'trade_management.total.header' | translate}}
+      </mat-expansion-panel-header>
+
+      <div fxLayout="column" fxLayoutAlign="space-between" fxFill>
+        <div fxLayout="row" class="my-3" fxLayoutAlign="end">
+          <!--Extract button-->
+          <button mat-raised-button class="mr-2" [disabled]="searchForm.invalid"
+            (click)="onSearch()">{{'actions.extract'|translate}}</button>
+
+          <!--Search button-->
+          <button mat-raised-button [disabled]="searchForm.invalid"
+            (click)="onSearch()">{{'actions.search'|translate}}</button>
+        </div>
+
+        <div fxLayout="row wrap">
+          <app-card-item fxFlex.lg="25" fxFlex.md="50" fxFlex.xl="15"
+            *ngFor="let item of cardItems; trackBy:trackByCardItem" [objectType]="ObjectType.CATEGUORY" [item]="item">
+          </app-card-item>
+        </div>
+      </div>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+
+</div>

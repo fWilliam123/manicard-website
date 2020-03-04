@@ -1,0 +1,13 @@
+@import "src/styles/colors";
+
+.user-infos {
+  div {
+    line-height: 2em;
+
+    span {
+      font-weight: 700;
+      font-size: 18px;
+      font-family: Roboto, sans-serif;
+    }
+  }
+}
