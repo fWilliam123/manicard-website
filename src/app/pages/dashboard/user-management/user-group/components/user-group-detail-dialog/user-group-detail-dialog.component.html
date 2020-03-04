@@ -1,0 +1,39 @@
+<span mat-dialog-title>Groupe d'utiliateurs: Association camerounais Montreal</span>
+
+<mat-dialog-content fxLayout="column" [formGroup]="form" fxLayoutAlign="space-between">
+  <!--First row-->
+  <div fxLayoutAlign="space-between" fxLayout="row wrap" class="mt-2">
+    <!--First column-->
+    <div fxLayout="column space-between" class="user-infos">
+      <div>{{'user_group_type.group_ID'|translate|titlecase}}: <span>ETOJ345</span></div>
+      <div>{{'user_group_type.manager_number'|translate :{number: 1}|titlecase}}: <span>444455544333</span></div>
+      <div>{{'user_group_type.manager_number'|translate :{number: 2}|titlecase}}: <span>44556677</span></div>
+    </div>
+
+    <!--Second column-->
+    <div fxLayout="column" fxLayoutAlign="space-between" class="mt-2">
+      <div>{{'user_group_type.member_type'|translate|titlecase}}: <span>Etudiant</span></div>
+
+      <mat-form-field class="mr-md-3 mt-3">
+        <mat-label>{{ 'user_group_type.additional_reduction' | translate |titlecase }}</mat-label>
+        <input matInput type="number" name="reduction" formControlName="reduction">
+        <span matSuffix>%</span>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!--Second row-->
+  <mat-accordion class="mb-4">
+    <!--Detail accordion-->
+    <app-detail-accordion-item *ngFor="let item of detailsAccordion; let i = index; trackBy:trackByDetailAccordion"
+      [detailAccordionItem]="item" [index]="i">
+    </app-detail-accordion-item>
+  </mat-accordion>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="py-2">
+  <button mat-button mat-dialog-close color="primary">{{'actions.cancel'|translate}}</button>
+  <button mat-button color="primary">
+    {{ 'actions.save' | translate }}
+  </button>
+</mat-dialog-actions>

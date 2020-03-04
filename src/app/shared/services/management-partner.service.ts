@@ -21,14 +21,14 @@ export class ManagementPartnerService {
    * Retrieve the list of actions in progress
    */
   getActionsInProgress(): Observable<Request[]> {
-    return this.http.get<Request[]>(`${environment.get_all_entities_instances_url}/${this.localStorageService.getGuid()}/${ObjectType.Request}`);
+    return this.http.get<Request[]>(`${environment.get_all_entities_instances_url}/${this.localStorageService.getGuid()}/${ObjectType.REQUEST}`);
   }
 
   /**
    * Retrieve the details of actions in progress
    */
   getDetailActionsInProgress(id: string): Observable<Request> {
-    return this.http.get<Request>(`${environment.get_all_entities_instances_url}/${this.localStorageService.getGuid()}/${ObjectType.Request}/${id}`);
+    return this.http.get<Request>(`${environment.get_all_entities_instances_url}/${this.localStorageService.getGuid()}/${ObjectType.REQUEST}/${id}`);
   }
 
   /**
@@ -36,6 +36,6 @@ export class ManagementPartnerService {
    * @param id code
    */
   getUsers(id: string): Observable<User[]> {
-    return this.http.get<User[]>(`${environment.get_all_entities_instances_url}/${this.localStorageService.getGuid()}/${ObjectType.User}/${id}`);
+    return this.http.get<User[]>(`${environment.get_all_entities_instances_url}/${this.localStorageService.getGuid()}/${ObjectType.USER}/${id}`);
   }
 }

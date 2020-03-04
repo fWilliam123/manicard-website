@@ -1,0 +1,43 @@
+@import "src/styles/status";
+
+mat-card {
+  padding: 0 0 1em 0;
+  border-radius: 5px;
+  margin: 0 0.5em 1em 0.5em;
+}
+
+.title {
+  color: $indigo-darker
+}
+
+.price-percent {
+  color: gray;
+}
+
+.subtitle {
+  color: $orange-light
+}
+
+mat-card-content {
+  padding: 0 1em 0 1em;
+}
+
+mat-card-actions {
+  padding-right: 1em;
+}
+
+.image-container {
+  //max-height: 15em;
+  border-bottom: 1px solid $indigo-darker;
+
+  img {
+    height: auto;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    max-width: 100%;
+  }
+}
+
+.icon {
+  height: 3em;
+}

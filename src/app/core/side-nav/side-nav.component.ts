@@ -17,7 +17,7 @@ export class SideNavComponent {
   navItems: NavItem[] = [
     {
       displayName: 'extract_data',
-      iconName: 'assets/images/PNG-04.png',
+      iconName: 'assets/images/customer-group.png',
       route: '/dashboard',
       rappidLink: true
     },
@@ -35,6 +35,11 @@ export class SideNavComponent {
           displayName: 'user_management.users',
           iconName: '',
           route: '/dashboard/user-management/users',
+        },
+        {
+          displayName: 'user_management.user-group',
+          iconName: '',
+          route: '/dashboard/user-management/user-group',
         },
       ]
     },

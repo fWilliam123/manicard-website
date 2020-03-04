@@ -1,30 +1,30 @@
 export enum ObjectType {
-  Undefined,
-  User,			// Utilisateur
-  Shop,			// Commerce
-  Category,			// Categuorie
-  Product,			// Produit
-  Notification,		// Notifications (liste)
-  Contract,			// Contrat
-  Coupon,
+  UNDEFINED,
+  USER,			// Utilisateur
+  SHOP,			// Commerce
+  CATEGUORY,			// Categuorie
+  PRODUCT,			// Produit
+  NOTIFICATION,		// Notifications (liste)
+  CONTRACT,			// Contrat
+  COUPON,
   CouponPhoto,		// Photo coupon
   CouponProduct,
-  Credit,			// Credit
-  Discount,			// Rabais
+  CREDIT,			// Credit
+  DISCOUNT,			// Rabais
   FlatRate,			// Forfaits
   ProductPhoto,
-  Request,  			// Action en cours
+  REQUEST,  			// Action en cours
   ShopMember,		// Employer d'une boutique ou caisse
   ShopRelation,
   UserCoupon,		// coupon achete de le user
   UserCredit,		//
   UserDiscount,
-  UserGroup,			// Groupe d'user
+  USER_GROUP,			// Groupe d'user
   UserGroupDiscount,
   UserGroupUser,
   UserProduct,
-  Payment,			// transaction, historique de paiements
-  AccountType,		// type de compte
+  PAYMENT,			// transaction, historique de paiements
+  ACCOUNT_TYPE,		// type de compte
   NotificationTargetType,	// Type de notifiers
   ProductType,
   RequestType,

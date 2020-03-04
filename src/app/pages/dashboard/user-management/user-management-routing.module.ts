@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'users',
     loadChildren: () => import('./users/users.module').then(mod => mod.UsersModule)
+  },
+  {
+    path: 'user-group',
+    loadChildren: () => import('./user-group/user-group.module').then(mod => mod.UserGroupModule)
   }];
 
 @NgModule({

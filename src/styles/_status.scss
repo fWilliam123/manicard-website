@@ -26,6 +26,10 @@
   background-color: $color-medium;
 }
 
+.status.archived-status {
+  background-color: $color-info;
+}
+
 .status.inarchiving-status {
   background-color: $color-invalid;
 }

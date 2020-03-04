@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { ManagementPartnerService } from '../../../shared/services';
-import { CardItemInput, Request } from './interfaces';
+import { ActionProgressItem, Request } from './interfaces';
 
 @Component({
   selector: 'app-home-dashboard',
@@ -10,7 +10,7 @@ import { CardItemInput, Request } from './interfaces';
 })
 export class HomeDashboardComponent implements OnInit {
 
-  items: CardItemInput[];
+  items: ActionProgressItem[];
   selectedIndex: number;
 
   constructor(private readonly managementPartnerService: ManagementPartnerService) { }
@@ -28,8 +28,8 @@ export class HomeDashboardComponent implements OnInit {
 
     this.selectedIndex = 0;
     this.managementPartnerService.getActionsInProgress().pipe(
-      map<Request[], CardItemInput[]>(data =>
-        data.map<CardItemInput>(item => ({
+      map<Request[], ActionProgressItem[]>(data =>
+        data.map<ActionProgressItem>(item => ({
           id: item.Id,
           description: item.Title,
           total: item.Id
@@ -45,7 +45,7 @@ export class HomeDashboardComponent implements OnInit {
     this.selectedIndex = index;
   }
 
-  trackByCardItem(_: number, item: CardItemInput): number {
+  trackByActionsProgressItem(_: number, item: ActionProgressItem): number {
     return item.id
   }
 

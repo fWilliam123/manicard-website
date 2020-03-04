@@ -3,6 +3,7 @@
 
 .mat-dialog-content {
   border-top: 2px solid $orange-darker;
+  color: $indigo-darker;
 }
 
 .mat-dialog-title {
@@ -23,5 +24,6 @@
   .mat-button-base .mat-button-wrapper {
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
+    font-weight: 600;
   }
 }

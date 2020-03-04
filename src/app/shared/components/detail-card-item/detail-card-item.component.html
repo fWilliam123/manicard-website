@@ -1,0 +1,38 @@
+<mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
+  <!--Image-->
+  <div fxFlex="50" class="image-container">
+    <img src="{{detailCardItem.image}}" />
+  </div>
+
+  <!--Content-->
+  <div class="card-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="space-between" fxFlex>
+    <div fxLayout="column" fxLayoutAlign="space-between">
+      <span class="client">{{detailCardItem.title}}</span>
+      <span class="customer">{{detailCardItem.subtitle}}</span>
+    </div>
+
+    <ng-container [ngSwitch]="objectType">
+      <!--Product-->
+      <div *ngSwitchCase="ObjectType.PRODUCT" fxLayoutAlign="space-between center">
+        <div fxFlex="30" class="icon-container">
+          <img src="assets/images/product.png" />
+        </div>
+        <h4 fxFlex fxLayoutAlign="end">{{detailCardItem.price | currency :'CAD'}}</h4>
+      </div>
+
+      <!--Discount-->
+      <div *ngSwitchCase="ObjectType.DISCOUNT" class="discount-content" fxLayout="column" fxLayoutAlign="space-between">
+        <span class="client">{{ detailCardItem.date | intlDate :translate.currentLang :dateOptions }}</span>
+        <span class="customer">{{detailCardItem.percent/100 | percent}}</span>
+      </div>
+
+      <!--Coupon-->
+      <div *ngSwitchCase="ObjectType.COUPON" fxLayoutAlign="none center">
+        <div fxFlex="30" class="icon-container">
+          <img src="assets/images/coupon.png" />
+        </div>
+        <h4 fxFlex>x{{detailCardItem.numberItem}}</h4>
+      </div>
+    </ng-container>
+  </div>
+</mat-card>

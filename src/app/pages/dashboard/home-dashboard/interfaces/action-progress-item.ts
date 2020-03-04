@@ -1,4 +1,4 @@
-export interface CardItemInput {
+export interface ActionProgressItem {
   total: number;
   description: string;
   id: number;

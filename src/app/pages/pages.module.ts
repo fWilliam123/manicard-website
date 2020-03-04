@@ -14,6 +14,6 @@ import { PagesRoutingModule } from './pages-routing.module';
 
     // External
     TranslateModule.forChild(),
-  ]
+  ],
 })
 export class PagesModule { }

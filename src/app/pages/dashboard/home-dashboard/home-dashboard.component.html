@@ -1,8 +1,8 @@
 <app-page-title title="{{ 'actions_in_progress.title' | translate }}"></app-page-title>
 <div class="container-fluid wrapper-content">
   <div class="row">
-    <app-card-item (click)="onSelectedItemChange(i)" class="col-sm-12 col-md-6 col-lg-4"
-      *ngFor="let item of items; let i = index; trackBy:trackByCardItem" [index]="i" [selectedIndex]="selectedIndex"
-      [item]="item"></app-card-item>
+    <app-actions-progress-item (click)="onSelectedItemChange(i)" class="col-sm-12 col-md-6 col-lg-4"
+      *ngFor="let item of items; let i = index; trackBy:trackByActionsProgressItem" [index]="i"
+      [selectedIndex]="selectedIndex" [item]="item"></app-actions-progress-item>
   </div>
 </div>

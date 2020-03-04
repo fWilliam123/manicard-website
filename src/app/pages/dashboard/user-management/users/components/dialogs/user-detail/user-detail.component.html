@@ -31,313 +31,20 @@
 
   <!--Second row-->
   <mat-accordion class="mb-4">
-    <!--Fidelity Card-->
-    <mat-expansion-panel [expanded]="true">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-list fxFill>
-            <mat-list-item class="list-content" fxLayout="row">
-              <img class="imageIcon" matListIcon src="assets/images/PNG2-05.png" />
-              <span class="ml-2">{{'user_details.fidelity_card'|translate|titlecase}} (18)</span>
-            </mat-list-item>
-          </mat-list>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
+    <!--Detail accordion-->
+    <app-detail-accordion-item *ngFor="let item of detailsAccordion; let i = index; trackBy:trackByDetailAccordion"
+      [detailAccordionItem]="item" [index]="i">
+    </app-detail-accordion-item>
+  </mat-accordion>
+</mat-dialog-content>
 
-      <ng-template class="content container" matExpansionPanelContent>
-        <div class="row mt-3">
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/auth-page.jpg" />
-              </div>
-
-              <!--Content-->
-              <div class="card-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="space-between" fxFlex>
-                <div fxLayout="column" fxLayoutAlign="space-between">
-                  <span class="client">Lavage regulier</span>
-                  <span class="customer">Laverie super luxe</span>
-                </div>
-
-                <div fxLayoutAlign="space-between center">
-                  <div fxFlex="30" class="icon-container">
-                    <img src="assets/images/PNG2-05.png" />
-                  </div>
-                  <h2 fxFlex fxLayoutAlign="end">45$</h2>
-                </div>
-              </div>
-            </mat-card>
-          </div>
-
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/auth-page.jpg" />
-              </div>
-
-              <!--Content-->
-              <div class="card-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="space-between" fxFlex>
-                <div fxLayout="column" fxLayoutAlign="space-between">
-                  <span class="client">Lavage regulier</span>
-                  <span class="customer">Laverie super luxe</span>
-                </div>
-
-                <div fxLayoutAlign="space-between center">
-                  <div fxFlex="30" class="icon-container">
-                    <img src="assets/images/PNG2-05.png" />
-                  </div>
-                  <h2 fxFlex fxLayoutAlign="end">45$</h2>
-                </div>
-              </div>
-            </mat-card>
-          </div>
-
-        </div>
-      </ng-template>
-
-    </mat-expansion-panel>
-
-    <!--Discount-->
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-list fxFill>
-            <mat-list-item class="list-content mb-2" fxLayout="row">
-              <img class="imageIcon" matListIcon src="assets/images/discount.png" />
-              <span class="ml-2">{{'user_details.discount'|translate|titlecase}} (54)</span>
-            </mat-list-item>
-          </mat-list>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-
-      <ng-template class="content container" matExpansionPanelContent>
-        <div class="row mt-3">
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/auth-page.jpg" />
-              </div>
-
-              <!--Content-->
-              <div class="discount-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="space-between" fxFlex>
-                <div fxLayout="column" fxLayoutAlign="space-between">
-                  <span class="client">Rabais saint valentin</span>
-                  <span class="customer">Beautiful moment</span>
-                </div>
-
-                <div fxLayout="column" fxLayoutAlign="space-between">
-                  <span class="client">{{ fakeDate | intlDate :translate.currentLang :dateOptions }}</span>
-                  <span class="customer">15%</span>
-                </div>
-              </div>
-            </mat-card>
-          </div>
-
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/auth-page.jpg" />
-              </div>
-
-              <!--Content-->
-              <div class="discount-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="space-between" fxFlex>
-                <div fxLayout="column" fxLayoutAlign="space-between">
-                  <span class="client">Rabais saint valentin</span>
-                  <span class="customer">Beautiful moment</span>
-                </div>
-
-                <div fxLayout="column" fxLayoutAlign="space-between">
-                  <span class="client">{{ fakeDate | intlDate :translate.currentLang :dateOptions }}</span>
-                  <span class="customer">15%</span>
-                </div>
-              </div>
-            </mat-card>
-          </div>
-
-        </div>
-      </ng-template>
-
-    </mat-expansion-panel>
-
-    <!--Coupon-->
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-list fxFill>
-            <mat-list-item class="list-content mb-2" fxLayout="row">
-              <img class="imageIcon" matListIcon src="assets/images/coupon.png" />
-              <span class="ml-2">{{'user_details.coupon'|translate|titlecase}} (5)</span>
-            </mat-list-item>
-          </mat-list>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-
-      <ng-template class="content container" matExpansionPanelContent>
-        <div class="row mt-3">
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/auth-page.jpg" />
-              </div>
-
-              <!--Content-->
-              <div class="card-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="space-between" fxFlex>
-                <div fxLayout="column" fxLayoutAlign="space-between">
-                  <span class="client">Lavage a la main</span>
-                  <span class="customer">Laverie super luxe</span>
-                </div>
-
-                <div fxLayoutAlign="none center">
-                  <div fxFlex="30" class="icon-container">
-                    <img src="assets/images/coupon.png" />
-                  </div>
-                  <h3 fxFlex>x4</h3>
-                </div>
-              </div>
-            </mat-card>
-          </div>
-
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/auth-page.jpg" />
-              </div>
-
-              <!--Content-->
-              <div class="card-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="space-between" fxFlex>
-                <div fxLayout="column" fxLayoutAlign="space-between">
-                  <span class="client">Lavage a la main</span>
-                  <span class="customer">Laverie super luxe</span>
-                </div>
-
-                <div fxLayoutAlign="none center">
-                  <div fxFlex="30" class="icon-container">
-                    <img src="assets/images/coupon.png" />
-                  </div>
-                  <h3 fxFlex>x4</h3>
-                </div>
-              </div>
-            </mat-card>
-          </div>
-
-        </div>
-      </ng-template>
-
-    </mat-expansion-panel>
-
-
-    <!--Notifications-->
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-list fxFill>
-            <mat-list-item class="list-content mb-2" fxLayout="row">
-              <img class="imageIcon" matListIcon src="assets/images/notification.png" />
-              <span class="ml-2">{{'user_details.notification'|translate|titlecase}} (10)</span>
-            </mat-list-item>
-          </mat-list>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-
-      <ng-template class="content container" matExpansionPanelContent>
-        <div class="row mt-3">
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/auth-page.jpg" />
-              </div>
-
-              <!--Content-->
-              <div class="card-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="space-between" fxFlex>
-                <div fxLayout="column" fxLayoutAlign="space-between">
-                  <span class="client">Fermeture momentanee</span>
-                  <span class="customer">Laverie super luxe</span>
-                </div>
-              </div>
-            </mat-card>
-          </div>
-
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/auth-page.jpg" />
-              </div>
-
-              <!--Content-->
-              <div class="card-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="space-between" fxFlex>
-                <div fxLayout="column" fxLayoutAlign="space-between">
-                  <span class="client">Fermeture momentanee</span>
-                  <span class="customer">Laverie super luxe</span>
-                </div>
-              </div>
-            </mat-card>
-          </div>
-
-        </div>
-      </ng-template>
-
-    </mat-expansion-panel>
-
-
-    <!--Customer group-->
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          <mat-list fxFill>
-            <mat-list-item class="list-content mb-2" fxLayout="row">
-              <img class="imageIcon" matListIcon src="assets/images/customer-group.png" />
-              <span class="ml-2">{{'user_details.customer_group'|translate|titlecase}} (20)</span>
-            </mat-list-item>
-          </mat-list>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-
-      <ng-template class="content container" matExpansionPanelContent>
-        <div class="row mt-3">
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/club.png" />
-              </div>
-
-              <!--Content-->
-              <div class="card-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="start" fxFlex>
-                <span class="client">Club de sport Laval</span>
-                <span class="customer">26 membres</span>
-              </div>
-            </mat-card>
-          </div>
-
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/club.png" />
-              </div>
-
-              <!--Content-->
-              <div class="card-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="start" fxFlex>
-                <span class="client">Club de sport Laval</span>
-                <span class="customer">26 membres</span>
-              </div>
-            </mat-card>
-          </div>
-
-        </div>
-      </ng-template>
-
-    </mat-expansion-panel>
-
-    <!--Team-->
+<mat-dialog-actions align="end" class="py-2">
+  <button mat-button mat-dialog-close color="primary">{{'actions.cancel'|translate}}</button>
+  <button mat-button color="primary">
+    {{ 'actions.save' | translate }}
+  </button>
+</mat-dialog-actions>
+<!--Team
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -350,49 +57,137 @@
         </mat-panel-title>
       </mat-expansion-panel-header>
 
-      <ng-template class="content container" matExpansionPanelContent>
-        <div class="row mt-3">
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/club.png" />
-              </div>
-
-              <!--Content-->
-              <div class="card-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="start" fxFlex>
-                <span class="client">Club de sport Laval</span>
-                <span class="customer">26 membres</span>
-              </div>
-            </mat-card>
-          </div>
-
-          <div class="col-6">
-            <mat-card fxFill fxLayout="row" fxLayoutAlign="space-between">
-              <!--Image-->
-              <div fxFlex="50" class="image-container">
-                <img src="assets/images/club.png" />
-              </div>
-
-              <!--Content-->
-              <div class="card-content" fxFlexOffset="5" fxLayout="column" fxLayoutAlign="start" fxFlex>
-                <span class="client">Club de sport Laval</span>
-                <span class="customer">26 membres</span>
-              </div>
-            </mat-card>
-          </div>
-
+      <ng-template matExpansionPanelContent>
+        <div class="content-panel">
+          <table>
+            <tr>
+              <th>Num Manicard</th>
+              <th>Code</th>
+              <th>Prenom</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>Ernst Handel</td>
+              <td>Roland Mendel</td>
+              <td>Austria</td>
+            </tr>
+            <tr>
+              <td>Island Trading</td>
+              <td>Helen Bennett</td>
+              <td>UK</td>
+            </tr>
+          </table>
         </div>
       </ng-template>
 
     </mat-expansion-panel>
 
-  </mat-accordion>
-</mat-dialog-content>
+    Grouping
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-list fxFill>
+            <mat-list-item class="list-content mb-2" fxLayout="row">
+              <img class="imageIcon" matListIcon src="assets/images/grouping.png" />
+              <span class="ml-2">{{'user_details.grouping'|translate|titlecase}} (7)</span>
+            </mat-list-item>
+          </mat-list>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
 
-<mat-dialog-actions align="end" class="py-2">
-  <button mat-button mat-dialog-close color="primary">{{'actions.cancel'|translate}}</button>
-  <button mat-button color="primary">
-    {{ 'actions.save' | translate }}
-  </button>
-</mat-dialog-actions>
+      <ng-template matExpansionPanelContent>
+        <div class="content-panel">
+          <table>
+            <tr>
+              <th>Num Manicard</th>
+              <th>Code</th>
+              <th>Prenom</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>Ernst Handel</td>
+              <td>Roland Mendel</td>
+              <td>Austria</td>
+            </tr>
+            <tr>
+              <td>Island Trading</td>
+              <td>Helen Bennett</td>
+              <td>UK</td>
+            </tr>
+          </table>
+        </div>
+      </ng-template>
+    </mat-expansion-panel>
+
+    Additional details
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-list fxFill>
+            <mat-list-item class="list-content mb-2" fxLayout="row">
+              <img class="imageIcon" matListIcon src="" />
+              <span class="ml-2">{{'user_details.additional_details'|translate|titlecase}} (7)</span>
+            </mat-list-item>
+          </mat-list>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <ng-template matExpansionPanelContent>
+        <div fxLayout="row wrap" fxLayoutAlign="space-between" class="content-panel additional-details">
+          <div fxFlex.lg="47">
+            {{'detail.administrator'|translate|titlecase}}: <span>{{data.user.Code}}
+            </span>
+          </div>
+          <div fxFlex.lg="47">
+            {{'detail.administrator'|translate|titlecase}}: <span>{{data.user.Code}}</span>
+          </div>
+          <div fxFlex.lg="47">
+            {{'detail.email'|translate|titlecase}}: <span>{{data.user.Code}}</span>
+          </div>
+          <div fxFlex.lg="47">
+            {{'detail.administrator'|translate|titlecase}}: <span>{{data.user.Code}}</span>
+          </div>
+          <div fxFlex.lg="47">
+            {{'detail.start_date'|translate|titlecase}}:
+            <span>{{data.user.CreateDate| intlDate :translate.currentLang :dateOptions}}</span>
+          </div>
+          <div fxFlex.lg="47">
+            {{'detail.balance'|translate|titlecase}}:
+            <span>{{data.user.AvailableCredit | currency :'CAD'}}</span>
+          </div>
+          <div fxFlex.lg="47">
+            {{'detail.renewal_date'|translate|titlecase}}:
+            <span>{{data.user.CreateDate| intlDate :translate.currentLang :dateOptions}}</span>
+          </div>
+          <div fxFlex.lg="47">
+            {{'detail.payment_dateline'|translate|titlecase}}:
+            <span>{{data.user.CreateDate| intlDate :translate.currentLang :dateOptions}}</span>
+          </div>
+          <div fxFlex="100">
+            {{'detail.dashboard'|translate|titlecase}}
+            <span>{{data.user.CreateDate| intlDate :translate.currentLang :dateOptions}}</span>
+          </div>
+        </div>
+      </ng-template>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+</mat-dialog-content>-->

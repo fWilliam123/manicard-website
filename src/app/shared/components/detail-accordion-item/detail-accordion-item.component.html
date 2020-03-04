@@ -1,0 +1,27 @@
+<mat-expansion-panel [expanded]="index===0">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <mat-list fxFill>
+        <mat-list-item class="list-content" fxLayout="row">
+          <!--Icon-->
+          <img class="imageIcon" matListIcon src="{{displayableAccordionItem.icon}}" />
+          <!--Title-->
+          <span class="ml-2">
+            {{displayableAccordionItem.titleTranslationKey|translate}} ({{displayableAccordionItem.total}})
+          </span>
+        </mat-list-item>
+      </mat-list>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <ng-template class="content container" matExpansionPanelContent>
+    <div class="row mt-3">
+      <!--Details card item-->
+      <div class="col-6" *ngFor="let item of displayableAccordionItem.detailsCard; trackBy:trackByDetailsCard">
+        <app-detail-card-item [detailCardItem]="item" [objectType]="displayableAccordionItem.objectType">
+        </app-detail-card-item>
+      </div>
+    </div>
+  </ng-template>
+
+</mat-expansion-panel>

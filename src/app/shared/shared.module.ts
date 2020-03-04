@@ -26,10 +26,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { AuthPageContentComponent } from './components/auth-page-content/auth-page-content.component';
-import { PageTitleComponent } from './components/page-title/page-title.component';
-import { IntlDatePipe } from './pipes/intl-date.pipe';
-import { IntlDateTimePipe } from './pipes/intl-date-time.pipe';
+import { CardItemComponent } from './components/card-item/card-item.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { DetailAccordionItemComponent } from './components/detail-accordion-item/detail-accordion-item.component';
+import { DetailCardItemComponent } from './components/detail-card-item/detail-card-item.component';
+import { PageTitleComponent } from './components/page-title/page-title.component';
+import { IntlDateTimePipe } from './pipes/intl-date-time.pipe';
+import { IntlDatePipe } from './pipes/intl-date.pipe';
 
 const SHARED_MATERIAL = [
   FlexLayoutModule,
@@ -66,25 +69,33 @@ const SHARED_LIBRARIES = [
 
 const SHARED_COMPONENTS = [
   AuthPageContentComponent,
-  PageTitleComponent
+  PageTitleComponent,
+  CardItemComponent,
+  DetailAccordionItemComponent,
+  DetailCardItemComponent,
 ];
 
 const SHARED_PIPES = [
   IntlDatePipe,
   IntlDateTimePipe,
+];
+
+const SHARED_DIALOGS = [
+  ConfirmDialogComponent
 ]
 
 @NgModule({
   declarations: [
     SHARED_COMPONENTS,
     SHARED_PIPES,
-    ConfirmDialogComponent
+    SHARED_DIALOGS,
   ],
   exports: [
     SHARED_MATERIAL,
     SHARED_LIBRARIES,
     SHARED_COMPONENTS,
-    SHARED_PIPES
+    SHARED_PIPES,
+    SHARED_DIALOGS
   ],
   imports: [
     CommonModule,

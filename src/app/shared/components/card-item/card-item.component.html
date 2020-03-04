@@ -1,0 +1,28 @@
+<mat-card>
+  <div fxFill (click)="onOpenDetail()" fxLayoutAlign="" class="image-container">
+    <img src="{{displayableItem.image}}">
+  </div>
+  <mat-card-content>
+    <div fxLayout="column">
+      <h3 class="title">{{displayableItem.title}}</h3>
+      <span class="subtitle mb-2">{{displayableItem.subtitle}}</span>
+      <div class="mb-3 price-percent" fxLayoutAlign="space-between">
+        <span *ngIf="displayableItem.price">{{displayableItem?.price | currency: 'CAD'}}</span>
+        <span>{{displayableItem?.percent|percent}}</span>
+      </div>
+      <div fxLayoutAlign="space-between">
+        <div>
+          <div class="status" [ngClass]="displayableItem.statusClass">
+            {{displayableItem.statusTranslationKey|translate}}
+          </div>
+        </div>
+        <div fxLayoutAlign="end">
+          <img class="icon" src="{{displayableItem?.icon}}">
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button (click)="openConfirmDialog()" color="primary">{{'actions.delete'|uppercase}}</button>
+  </mat-card-actions>
+</mat-card>

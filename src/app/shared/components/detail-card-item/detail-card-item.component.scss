@@ -1,0 +1,50 @@
+@import "src/styles/colors";
+
+
+.discount-content {
+  padding-bottom: 1em;
+}
+
+.card-content,
+.discount-content {
+  font-size: 15px;
+  padding-top: 1em;
+
+  .customer {
+    color: $orange-light;
+  }
+}
+
+mat-card {
+  padding: 5px 1em 0 5px;
+  border-radius: 8px;
+}
+
+.icon-container img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.image-container {
+  min-height: 10em;
+
+  img {
+    min-height: inherit;
+    width: auto;
+    border-radius: 8px;
+    max-width: 100%;
+  }
+}
+
+.content-panel {
+  max-height: 50em;
+  overflow-y: auto;
+}
+
+.icon-img {
+  img {
+    width: auto;
+    height: 100%;
+  }
+}
