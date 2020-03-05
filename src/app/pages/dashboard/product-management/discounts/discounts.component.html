@@ -21,7 +21,7 @@
         </div>
 
         <div fxLayout="row wrap">
-          <div fxFlex.lg="25" fxFlex.md="50" fxFlex.xl="15" *ngFor="let item of cardItems; trackBy:trackByCardItem">
+          <div fxFlex.lg="33" fxFlex.md="50" fxFlex.xl="15" *ngFor="let item of cardItems; trackBy:trackByCardItem">
             <app-card-item [objectType]="ObjectType.PRODUCT" [item]="item">
             </app-card-item>
           </div>

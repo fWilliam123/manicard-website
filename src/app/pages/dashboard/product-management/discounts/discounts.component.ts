@@ -21,40 +21,57 @@ export class DiscountsComponent implements OnInit {
       {
         id: 1,
         image: 'assets/images/auth-page.jpg',
-        title: 'Proprete voiture hiver 2020',
+        title: 'Lavage automobile',
         subtitle: '',
         status: Status.ACTIVE,
-        price: 80,
-        percent: 15
+        percent: 15,
+        icon: this.getDiscountIcon(Status.ACTIVE)
       },
       {
         id: 2,
         image: 'assets/images/auth-page.jpg',
-        title: 'Pneus hiver 2020',
+        title: 'Changement de pneus',
         subtitle: '',
         status: Status.PENDING,
-        price: 50,
-        percent: 30
+        percent: 30,
+        icon: this.getDiscountIcon(Status.PENDING)
       },
       {
         id: 3,
         image: 'assets/images/auth-page.jpg',
-        title: 'Entretien general',
+        title: 'Lavage automobile',
         subtitle: '',
         status: Status.INACTIVE,
-        price: 10,
-        percent: 25
+        percent: 25,
+        icon: this.getDiscountIcon(Status.INACTIVE)
       },
       {
         id: 4,
         image: 'assets/images/auth-page.jpg',
-        title: 'Entretien general',
+        title: 'Changement de pneus',
         subtitle: '',
         status: Status.ACTIVE,
-        price: 90,
-        percent: 50
+        percent: 50,
+        icon: this.getDiscountIcon(Status.ARCHIVED)
       }
     ]
+  }
+
+  getDiscountIcon(status: Status): string {
+    switch (status) {
+      case Status.ACTIVE:
+        return 'assets/images/customer-group.png';
+      case Status.INACTIVE:
+        return 'assets/images/team.png';
+      case Status.PENDING:
+        return 'assets/images/students.png';
+      case Status.UNDEFINED:
+        return 'assets/images/worker.png';
+      case Status.ARCHIVED:
+        return 'assets/images/students.png';
+      default:
+        throw new Error(`Invalid statusType: ${status}`);
+    }
   }
 
   trackByCardItem(_: number, item: CardItem): string {
