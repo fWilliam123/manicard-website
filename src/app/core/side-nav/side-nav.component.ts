@@ -49,6 +49,18 @@ export class SideNavComponent {
       iconName: '',
       route: '/dashboard/trade-management'
     },
+    {
+      displayName: 'product_management.title',
+      iconName: '',
+      route: '/dashboard/product-management',
+      children: [
+        {
+          displayName: 'product_management.products',
+          iconName: '',
+          route: '/dashboard/product-management/products',
+        },
+      ]
+    },
   ];
 
   trackByItem(_: number, navItem: NavItem): string {

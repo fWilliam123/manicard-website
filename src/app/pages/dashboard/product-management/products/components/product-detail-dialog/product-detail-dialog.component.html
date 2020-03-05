@@ -1,0 +1,71 @@
+<span mat-dialog-title>Service: Diagnostic general</span>
+
+<mat-dialog-content fxLayout="column" fxLayoutAlign="space-between">
+  <!--Images-->
+  <div class="my-3">
+    <app-image-fluid [imagesLink]="images"></app-image-fluid>
+  </div>
+  <!--First row-->
+  <div class="mb-5" fxLayout="row wrap" fxLayoutAlign="space-between">
+    <!--Fidelisation Column-->
+    <div fxFlex="45" fxLayout="column" class="mb-4 fidelisation">
+      <!--First row-->
+      <div fxLayoutAlign="space-between center">
+        <mat-checkbox>Fidelisation</mat-checkbox>
+        <h3>80$</h3>
+      </div>
+
+      <!--Second row-->
+      <div fxFlexFill class="description">
+        <p>Description .....</p>
+      </div>
+    </div>
+
+    <!--Recompense column-->
+    <div fxFlex="45" fxFlexOffset="10" fxLayout="column" fxLayoutAlign="space-between">
+      <!--First row-->
+      <div fxLayoutAlign="none center" class="recompense">
+        <h3>Recompense</h3>
+      </div>
+
+      <!--Second row-->
+      <div class="description mb-4">
+        <p>Description .....</p>
+      </div>
+
+      <!--Second row-->
+      <div>
+        <mat-form-field>
+          <mat-label>Nombre d'acahat requis</mat-label>
+          <mat-select [value]="4">
+            <mat-option [value]="1">1</mat-option>
+            <mat-option [value]="4">3</mat-option>
+            <mat-option [value]="3">3</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+  </div>
+
+  <!--Second row-->
+  <div fxLayout="column">
+    <h3 class="mb-1">Garage de l'expert</h3>
+    <span>270, rue test, Toronto, G0H7J8</span>
+  </div>
+
+  <!--Third row-->
+  <div fxLayout="column">
+    <h3 class="recompense">Regroupement</h3>
+    <b>Groupe tremblay</b>
+    <span>270, rue test, Toronto, G0H7J8</span>
+  </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" class="py-2">
+  <button mat-button mat-dialog-close color="primary">{{'actions.cancel'|translate}}</button>
+  <button mat-button color="primary">
+    {{ 'actions.save' | translate }}
+  </button>
+</mat-dialog-actions>

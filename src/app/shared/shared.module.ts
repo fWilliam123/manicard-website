@@ -33,6 +33,7 @@ import { DetailCardItemComponent } from './components/detail-card-item/detail-ca
 import { PageTitleComponent } from './components/page-title/page-title.component';
 import { IntlDateTimePipe } from './pipes/intl-date-time.pipe';
 import { IntlDatePipe } from './pipes/intl-date.pipe';
+import { ImageFluidComponent } from './components/image-fluid/image-fluid.component';
 
 const SHARED_MATERIAL = [
   FlexLayoutModule,
@@ -73,6 +74,7 @@ const SHARED_COMPONENTS = [
   CardItemComponent,
   DetailAccordionItemComponent,
   DetailCardItemComponent,
+  ImageFluidComponent,
 ];
 
 const SHARED_PIPES = [

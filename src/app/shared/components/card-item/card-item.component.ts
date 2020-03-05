@@ -9,6 +9,7 @@ import { CardItem, ConfirmDialogInput } from '../../interfaces';
 import { StatusMappingService } from '../../services';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { TradeDetailDialogComponent } from '../../../pages/dashboard/trade-management/components/trade-detail-dialog/trade-detail-dialog.component';
+import { ProductDetailDialogComponent } from '../../../pages/dashboard/product-management/products/components/product-detail-dialog/product-detail-dialog.component';
 
 @Component({
   selector: 'app-card-item',
@@ -64,6 +65,14 @@ export class CardItemComponent implements OnInit {
           messageValue: this.item.title,
           titleTranslationKey: marker('trade_management.delete.title')
         }
+      case ObjectType.PRODUCT:
+        return {
+          snackBarMessageKey: marker('snackbar.product.delete'),
+          messageTranslationKey: marker('product_management.product.delete.message'),
+          messageKey: 'product',
+          messageValue: this.item.title,
+          titleTranslationKey: marker('product_management.product.delete.title')
+        }
       default:
         this._error();
     }
@@ -109,11 +118,19 @@ export class CardItemComponent implements OnInit {
           width: '50em'
         });
         break;
+
       case ObjectType.CATEGUORY:
         this.dialog.open<TradeDetailDialogComponent>(TradeDetailDialogComponent, {
           width: '50em'
         });
         break;
+
+      case ObjectType.PRODUCT:
+        this.dialog.open<ProductDetailDialogComponent>(ProductDetailDialogComponent, {
+          width: '70em'
+        });
+        break;
+
       default:
         this._error();
     }

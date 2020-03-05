@@ -1,0 +1,5 @@
+<div fxLayoutAlign="space-between" fxLayout="row wrap">
+  <div fxFlex="24" *ngFor="let item of imagesLink; trackBy:trackByLink">
+    <img [src]="item" class="img-thumbnail" />
+  </div>
+</div>

@@ -19,6 +19,10 @@ const routes: Routes = [
         path: 'trade-management',
         loadChildren: () => import('./trade-management/trade-management.module').then(mod => mod.TradeManagementModule)
       },
+      {
+        path: 'product-management',
+        loadChildren: () => import('./product-management/product-management.module').then(mod => mod.ProductManagementModule)
+      },
     ]
   },
 

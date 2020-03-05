@@ -1,0 +1,16 @@
+@import "src/styles/colors";
+
+.description {
+  border: 1px $indigo-darker solid;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0 10px;
+  height: inherit;
+  overflow-y: auto;
+  min-height: 5em;
+}
+
+.recompense {
+  color: $orange-darker;
+  font-family: Raleway, sans-serif;
+}
