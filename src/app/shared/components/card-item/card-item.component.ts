@@ -32,6 +32,7 @@ export class CardItemComponent implements OnInit {
   ngOnInit(): void {
     this.displayableItem = {
       ...this.item,
+      percent: this.item?.percent / 100,
       statusClass: this.statusMappingService.statusClass(this.item.status),
       statusTranslationKey: this.statusMappingService.translationKey(this.item.status)
     }

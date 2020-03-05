@@ -7,6 +7,8 @@ marker('menu.user_management.title');
 marker('menu.user_management.users');
 marker('menu.user_management.user_group');
 marker('menu.trade_management');
+marker('menu.product_management.products');
+marker('menu.product_management.discounts');
 
 @Component({
   selector: 'app-side-nav',
@@ -58,6 +60,11 @@ export class SideNavComponent {
           displayName: 'product_management.products',
           iconName: '',
           route: '/dashboard/product-management/products',
+        },
+        {
+          displayName: 'product_management.discounts',
+          iconName: '',
+          route: '/dashboard/product-management/discounts',
         },
       ]
     },
