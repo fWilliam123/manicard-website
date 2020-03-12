@@ -12,7 +12,7 @@ cache:
 
 dependencies:
   stage: dependencies
-  sccript:
+  script:
     - npm ci
 
 lint:
