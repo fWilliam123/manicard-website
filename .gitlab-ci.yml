@@ -1,4 +1,5 @@
 stages:
+- depencies
 - lint
 - build
 
@@ -9,7 +10,8 @@ cache:
   paths:
     - node_modules/
 
-before_script:
+depencies:
+  stage: depencies
     - npm ci
 
 lint:
