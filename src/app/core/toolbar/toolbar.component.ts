@@ -18,7 +18,7 @@ export class ToolbarComponent implements OnInit {
   constructor(
     private readonly matIconRegistry: MatIconRegistry,
     private readonly domSanitizer: DomSanitizer,
-    private readonly store: Store,
+    private readonly store: Store
     // private readonly userService: UserService
   ) { }
 

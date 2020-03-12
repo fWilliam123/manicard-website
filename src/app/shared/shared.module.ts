@@ -27,7 +27,6 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { PageTitleComponent } from './components/page-title/page-title.component';
 
-
 const SHARED_MATERIAL = [
   FlexLayoutModule,
   MatBadgeModule,

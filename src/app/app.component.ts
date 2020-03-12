@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private readonly translate: TranslateService,
-    private readonly localStorageService: LocalStorageService,
+    private readonly localStorageService: LocalStorageService
   ) {
   }
 
