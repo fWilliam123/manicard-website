@@ -1,5 +1,4 @@
 stages:
-- test
 - lint
 - build
 
@@ -12,11 +11,6 @@ cache:
 
 before_script:
     - npm ci
-
-test:
-  stage: test
-  script:
-    - npm run test
 
 lint:
   stage: lint
