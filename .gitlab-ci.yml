@@ -3,7 +3,7 @@ stages:
 - lint
 - build
 
-image: "node:latest-alpine"
+image: "node:alpine"
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -16,14 +16,14 @@ before_script:
 test:
   stage: test
   script:
-    - npm test
+    - npm run test
 
 lint:
   stage: lint
   script:
-    - npm lint
+    - npm run lint
 
 build:
   stage: build
   script:
-    - npm build
+    - npm run build
