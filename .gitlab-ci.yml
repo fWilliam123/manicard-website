@@ -1,0 +1,29 @@
+stages:
+- test
+- lint
+- build
+
+image: "node:latest-alpine"
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+before_script:
+    - npm ci
+
+test:
+  stage: test
+  script:
+    - npm test
+
+lint:
+  stage: lint
+  script:
+    - npm lint
+
+build:
+  stage: build
+  script:
+    - npm build
