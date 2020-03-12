@@ -2,7 +2,7 @@ stages:
 - lint
 - build
 
-image: "node:alpine"
+image: "node:13.10.1-alpine"
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
